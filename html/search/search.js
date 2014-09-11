@@ -10,7 +10,7 @@ var indexSectionsWithContent =
   0: "$_acdegilmprstu",
   1: "giu",
   2: "c",
-  3: "cdgilmsu",
+  3: "dgilmsu",
   4: "_acdegmprs",
   5: "$eit"
 };
