@@ -45,14 +45,14 @@ PROJECT_BRIEF          = "Système d'échanges pour organiser un autostop."
 # exceed 55 pixels and the maximum width should not exceed 200 pixels. 
 # Doxygen will copy the logo to the output directory.
 
-PROJECT_LOGO           = /home/marc/HTML/VAP2/photos/logo.png
+PROJECT_LOGO           = ./photos/logo.png
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) 
 # base path where the generated documentation will be put. 
 # If a relative path is entered, it will be relative to the location 
 # where doxygen was started. If left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = /home/marc/HTML/VAP2013_14/vapdoc
+OUTPUT_DIRECTORY       = html/docu/
 
 # If the CREATE_SUBDIRS tag is set to YES, then doxygen will create 
 # 4096 sub-directories (in 2 levels) under the output directory of each output 
@@ -665,8 +665,8 @@ WARN_LOGFILE           =
 # directories like "/usr/src/myproject". Separate the files or directories 
 # with spaces.
 
-INPUT                  = /home/marc/HTML/VAP2013_14/vapspace \
-                         /home/marc/HTML/VAP2013_14/Extra-Docu
+INPUT                  = ./vapspace \
+                         ./Extra-Docu
 
 # This tag can be used to specify the character encoding of the source files 
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding, which is 
@@ -731,8 +731,8 @@ RECURSIVE              = YES
 # Note that relative paths are relative to the directory from which doxygen is 
 # run.
 
-EXCLUDE                = vapspace/vapapi/vues_fr/ \
-                         vapspace/vapapi/vues_nl/
+EXCLUDE                = ./vapspace/vapapi/vues_fr/ \
+                         ./vapspace/vapapi/vues_nl/
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or 
 # directories that are symbolic links (a Unix file system feature) are excluded 
@@ -907,7 +907,7 @@ GENERATE_HTML          = YES
 # If a relative path is entered the value of OUTPUT_DIRECTORY will be 
 # put in front of it. If left blank `html' will be used as the default path.
 
-HTML_OUTPUT            = html
+HTML_OUTPUT            = 
 
 # The HTML_FILE_EXTENSION tag can be used to specify the file extension for 
 # each generated HTML page (for example: .htm,.php,.asp). If it is left blank 
