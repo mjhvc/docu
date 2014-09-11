@@ -1,0 +1,531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Vapspace:  Fichier source de vapspace/vaplib/GererData.class.php</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Vapspace
+   </div>
+   <div id="projectbrief">Système d&#39;échanges pour organiser un autostop.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="../../pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="../../annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="../../globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d4/dea/_gerer_data_8class_8php_source.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">GererData.class.php</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/dea/_gerer_data_8class_8php.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; &lt;?php</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;include_once(<span class="stringliteral">&#39;IniData.class.php&#39;</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/d5e/class_gerer_data.html">GererData</a> <span class="keyword">extends</span> <a class="code" href="../../d9/d12/class_ini_data.html">IniData</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="comment">//Déclaration attributs </span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#ae0738908b8baec44815b18f10dbe73c3">   18</a></span>&#160;  <span class="keyword">protected</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#ae0738908b8baec44815b18f10dbe73c3">$attributsAttendus</a> = array(); </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#af24bdb4a408848058b0a2e17e009bc10">   19</a></span>&#160;  <span class="keyword">protected</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#af24bdb4a408848058b0a2e17e009bc10">$champUtile</a> = <span class="stringliteral">&#39;&#39;</span>; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a5ac9cbb4c20bcb3f4076546dc104d53b">   20</a></span>&#160;  <span class="keyword">protected</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a5ac9cbb4c20bcb3f4076546dc104d53b">$champInutile</a> = <span class="stringliteral">&#39;&#39;</span>; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a37570bbef652266723a60caed6a25df7">   21</a></span>&#160;  <span class="keyword">protected</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a37570bbef652266723a60caed6a25df7">$classement</a> = array();  </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a88d1f7fad733491bae70bc55262ce7bd">   22</a></span>&#160;  <span class="keyword">protected</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a88d1f7fad733491bae70bc55262ce7bd">$cleStat</a> = <span class="stringliteral">&#39;&#39;</span>;  </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a066ebc506b14934078f527c186da827a">   23</a></span>&#160;  <span class="keyword">protected</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a066ebc506b14934078f527c186da827a">$lastId</a> ; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#acec5eaf2a508ace18831bc80e69a9b13">   24</a></span>&#160;  <span class="keyword">protected</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#acec5eaf2a508ace18831bc80e69a9b13">$nomClePK</a>; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#af63960112e4a2615ee88ef95c3a7d632">   25</a></span>&#160;  <span class="keyword">protected</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#af63960112e4a2615ee88ef95c3a7d632">$nomCleFK</a>;  </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a9c8d7af07f62cabe0ba8d1c2aec62b30">   26</a></span>&#160;  <span class="keyword">protected</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a9c8d7af07f62cabe0ba8d1c2aec62b30">$nomContexte</a>; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a38db42d4e096fde44cc1d6d1c4d5f3c2">   27</a></span>&#160;  <span class="keyword">protected</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a38db42d4e096fde44cc1d6d1c4d5f3c2">$ofk</a>; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#ac12059294c9392582403cf408b61d951">   28</a></span>&#160;  <span class="keyword">protected</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#ac12059294c9392582403cf408b61d951">$tableLi</a>; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a8102e606dfcee9258772c329928380b4">   29</a></span>&#160;  <span class="keyword">protected</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a8102e606dfcee9258772c329928380b4">$valChampUtile</a> = <span class="stringliteral">&#39;&#39;</span>;  </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a51daa6c8f6bfa3f1c182fe62f66dc05e">   30</a></span>&#160;  <span class="keyword">protected</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a51daa6c8f6bfa3f1c182fe62f66dc05e">$valChampinutile</a> = <span class="stringliteral">&#39;&#39;</span>;  </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a0d313a277e6de3eb2ffe5b4527aaac9c">   31</a></span>&#160;  <span class="keyword">protected</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a0d313a277e6de3eb2ffe5b4527aaac9c">$valofk</a>;  </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a853b90674cd5e73a4742f581e49db32e">   32</a></span>&#160;  <span class="keyword">protected</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a853b90674cd5e73a4742f581e49db32e">$valPPK</a>;  </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#ac33b9b491b3e1d7f7d476aba69fced86">   36</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#ac33b9b491b3e1d7f7d476aba69fced86">__construct</a>(<a class="code" href="../../d9/d12/class_ini_data.html#a9e2129648d3b2c589f300c5f95e86598">$contexte</a>=NULL,<a class="code" href="../../d9/d12/class_ini_data.html#a224bac6bff01494b4097e3e4f23b6537">$statut</a>=NULL)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">//Initiation</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    $this-&gt;tableLi = $this-&gt;nomClePK = $this-&gt;nomCleFK = $this-&gt;ofk = $this-&gt;valofk = <span class="stringliteral">&#39;&#39;</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    $this-&gt;champUtile = $this-&gt;valChampUtile = $this-&gt;champInutile = $this-&gt;valChampInutile = NULL;   </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    $this-&gt;attributsAttendus = $this-&gt;classement = array();  </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">//appel le constructeur parent en surchargeant les parametres</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d9/d12/class_ini_data.html#a9e2129648d3b2c589f300c5f95e86598">$contexte</a> != NULL &amp;&amp; <a class="code" href="../../d9/d12/class_ini_data.html#a224bac6bff01494b4097e3e4f23b6537">$statut</a> != NULL) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      parent::__construct(<a class="code" href="../../d9/d12/class_ini_data.html#a9e2129648d3b2c589f300c5f95e86598">$contexte</a>,<a class="code" href="../../d9/d12/class_ini_data.html#a224bac6bff01494b4097e3e4f23b6537">$statut</a>);    </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    } </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">else</span> { parent::__construct(); }  </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">//-------------ENCAPSULATION de IniData pour les controleurs-------------------//</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a90b37cb80ea6b2d50a97ab76deff0151">   57</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a90b37cb80ea6b2d50a97ab76deff0151">getContexte</a>(<a class="code" href="../../d9/d12/class_ini_data.html#a9e2129648d3b2c589f300c5f95e86598">$contexte</a>,<a class="code" href="../../d9/d12/class_ini_data.html#a224bac6bff01494b4097e3e4f23b6537">$statut</a>)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> $this-&gt;<a class="code" href="../../d9/d12/class_ini_data.html#a08f4ea96fa476dd39b052f5d7ae5810a">chargerContexte</a>(<a class="code" href="../../d9/d12/class_ini_data.html#a9e2129648d3b2c589f300c5f95e86598">$contexte</a>,<a class="code" href="../../d9/d12/class_ini_data.html#a224bac6bff01494b4097e3e4f23b6537">$statut</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a087693a2870ed1ae91b49d4a4bb72f15">   64</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a087693a2870ed1ae91b49d4a4bb72f15">getDataContexte</a>()</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d9/d12/class_ini_data.html#aab71b854b74293be269682b283839478">$this-&gt;dataContexte</a>;  </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a489d9a68560c78c6cd4018d81f1b3f4b">   71</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a489d9a68560c78c6cd4018d81f1b3f4b">resetContexte</a>(<a class="code" href="../../d9/d12/class_ini_data.html#a9e2129648d3b2c589f300c5f95e86598">$contexte</a>,<a class="code" href="../../d9/d12/class_ini_data.html#a224bac6bff01494b4097e3e4f23b6537">$statut</a>){</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      $tabNewContexte = array();  </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      $tabNewContexte = parent::rechargerContexte(<a class="code" href="../../d9/d12/class_ini_data.html#a9e2129648d3b2c589f300c5f95e86598">$contexte</a>,<a class="code" href="../../d9/d12/class_ini_data.html#a224bac6bff01494b4097e3e4f23b6537">$statut</a>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">return</span> $tabNewContexte;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">catch</span>(MyPhpException $e) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      $msg = $e-&gt;getMessage();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      $e-&gt;alerte($msg);  </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a705ef399818fa9d328be335f6faf281e">   85</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a705ef399818fa9d328be335f6faf281e">getLiensCles</a>()</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d9/d12/class_ini_data.html#a2d400f9e08272d8d42df32717d0217e4">$this-&gt;liensCles</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#af71cb18e60dda03e071df36d0963b7d1">   92</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#af71cb18e60dda03e071df36d0963b7d1">getArrayContextes</a>()</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d9/d12/class_ini_data.html#ab0d9d34c94832a4e0521aa824425c221">$this-&gt;arrayContextes</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  }</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a3607d383f86fd49c96df8bd7c15bc9de">   99</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a3607d383f86fd49c96df8bd7c15bc9de">getTables</a>($dyn=NULL)  </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">return</span> parent::getTables($dyn);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  }</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#afdc10e973ab64135bfd62eb8a36112bc">  106</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#afdc10e973ab64135bfd62eb8a36112bc">getDynTables</a>()</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    $dynamique = 1;    </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">return</span> parent::getTables($dynamique);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a66c9ee14e10c5e6fffabbeccf16f67ec">  114</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a66c9ee14e10c5e6fffabbeccf16f67ec">getPassiveTable</a>()</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    $passive = parent::getPassiveTable();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> $passive;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a23f351cc3ddb52292e89dd93e5dfdee3">  122</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a23f351cc3ddb52292e89dd93e5dfdee3">getLiaisonTable</a>()</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d9/d12/class_ini_data.html#aa8e9751490a4545746ed011c518d5759">$this-&gt;liaisonTable</a>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  }</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#afecf35ba17476247294379f5ccb19908">  129</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#afecf35ba17476247294379f5ccb19908">getExtraTable</a>()</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="../../d9/d12/class_ini_data.html#a3947197afbe1f1849e2911d4abc46c74">$extraTable</a> = parent::getExtraTable();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d9/d12/class_ini_data.html#a3947197afbe1f1849e2911d4abc46c74">$extraTable</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  }</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#aa029c9e28f3f98c660666eea10d0c1cf">  137</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#aa029c9e28f3f98c660666eea10d0c1cf">getPPK</a>()  </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;     <span class="keywordflow">return</span> <a class="code" href="../../d9/d12/class_ini_data.html#ac2d92fa0847669f395ba2c555c557c2d">$this-&gt;PPK</a>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  }</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a93098ed96a10a1ec387588f06e0d160f">  144</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a93098ed96a10a1ec387588f06e0d160f">getExtraFK</a>()</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d9/d12/class_ini_data.html#aa5debdb64b07c259f3406f90e8c331ea">$this-&gt;extraFK</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  }</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a2a973a399e8d31df44ebce6228b3e481">  151</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a2a973a399e8d31df44ebce6228b3e481">getCnx</a>()   </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d9/d12/class_ini_data.html#a2bf668097a6ffbe2070ba264c316debb">$this-&gt;bd</a>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  }</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a5d973ca2a23223098c9027be30a5a6e3">  158</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a5d973ca2a23223098c9027be30a5a6e3">getListeAttr</a>()</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    $liste = parent::getListeAttr();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">return</span> $liste;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  }</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a371ee4003fd4a85a1b5bd0220cafb953">  166</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a371ee4003fd4a85a1b5bd0220cafb953">getOblig</a>()</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    $liste = parent::getOblig();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">return</span> $liste;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  }</div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a86948bd39802d2e110ec0128feb71268">  174</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a86948bd39802d2e110ec0128feb71268">getFaculFull</a>()</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    $liste = parent::getFaculFull();</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">return</span> $liste;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  }</div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a29eb8afaefbdab1771e6aa20bd7d9b8d">  182</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a29eb8afaefbdab1771e6aa20bd7d9b8d">getFaculDyn</a>()</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    $liste = <a class="code" href="../../d9/d12/class_ini_data.html#ad3e47d712fcaf6b7892452c9b808ee2e">$this-&gt;dataFacul</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">return</span> $liste;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  }</div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a161d9e09131c8cb737c6f08263dcbe22">  190</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a161d9e09131c8cb737c6f08263dcbe22">getStatiqueValeurs</a>()</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d9/d12/class_ini_data.html#a58606f8666f130e28679424c20e5448f">$this-&gt;statiqueValeurs</a>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  }</div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a244c58909b418917a589d626ffdec2f1">  197</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a244c58909b418917a589d626ffdec2f1">getSchemaDataStatique</a>()</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d9/d12/class_ini_data.html#a7514b56e424ed4485a4042e2a3e0ae70">$this-&gt;schemaDataStatique</a>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  }</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a6ffbc18d7d53802ab5707d716e116f53">  204</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a6ffbc18d7d53802ab5707d716e116f53">getSchemaDataPassive</a>()</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d9/d12/class_ini_data.html#af43b62b0f49c24eb4cb4ee5d9a1e4743">$this-&gt;schemaDataPassive</a>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  }</div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a2b9868af7c052e261c94cb94df1bfcbe">  211</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a2b9868af7c052e261c94cb94df1bfcbe">getVue</a>()</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;     <span class="keywordflow">return</span> <a class="code" href="../../d9/d12/class_ini_data.html#a8bab3c9f042caa7e8d7c94d076157645">$this-&gt;dataVue</a>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  }</div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a278b894a5fae3d133f4e1310f74747f1">  217</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a278b894a5fae3d133f4e1310f74747f1">getmaGpc</a>($tableau)</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    $newTab = $this-&gt;<a class="code" href="../../d9/d12/class_ini_data.html#aa208b5e1dcec332b38c53e8f0c350811">magicNormHTTP</a>($tableau);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">return</span> $newTab;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  }</div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a38c737dae22cd3b2bed57cee2f25acf0">  227</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a38c737dae22cd3b2bed57cee2f25acf0">getDataTable</a>(<a class="code" href="../../d9/d12/class_ini_data.html#ab4a8e3a3199135154e97e1edd420e78a">$table</a>,$flag=NULL)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    $data = array();    </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">if</span> (!empty($flag)){</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      $data = parent::chargerTable(<a class="code" href="../../d9/d12/class_ini_data.html#ab4a8e3a3199135154e97e1edd420e78a">$table</a>,<span class="charliteral">&#39;1&#39;</span>);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">else</span> { $data = parent::chargerTable(<a class="code" href="../../d9/d12/class_ini_data.html#ab4a8e3a3199135154e97e1edd420e78a">$table</a>);}</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">return</span> $data;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  }</div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#aae2267b462281b6932d31d8e50a0d01b">  238</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#aae2267b462281b6932d31d8e50a0d01b">getGeneral</a>($type)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  { </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    $dataCont = NULL ;    </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">if</span> (!empty($this-&gt;dataContexte[<span class="stringliteral">&#39;general&#39;</span>][$type])) </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    { $dataCont = $this-&gt;dataContexte[<span class="stringliteral">&#39;general&#39;</span>][$type]; }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">return</span> $dataCont;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;   </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <span class="comment">//--------------protected---------------------//</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a015af91831c4d2428fe527bd4abc672b">  254</a></span>&#160;  <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a015af91831c4d2428fe527bd4abc672b">dataEntity</a>($chaine)</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">if</span> ($this-&gt;contexte == <span class="stringliteral">&#39;News&#39;</span>){ $propre = $chaine;}</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">else</span> { </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      $propre = htmlspecialchars($chaine,ENT_QUOTES,<span class="stringliteral">&quot;ISO-8859-1&quot;</span>);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      $propre = trim($propre);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">return</span> $propre;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  }</div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#acce63ef42e8d8352a5df19f2f72add0f">  270</a></span>&#160;  <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#acce63ef42e8d8352a5df19f2f72add0f">preparation</a>($valcle,<a class="code" href="../../d9/d12/class_ini_data.html#ab4a8e3a3199135154e97e1edd420e78a">$table</a>) </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  {    </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    $x = 0;  $tableBaseCont = array(); $idx = 0; $wagonSql = <span class="charliteral">&#39; &#39;</span>;        </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    $this-&gt;table = strval(<a class="code" href="../../d9/d12/class_ini_data.html#ab4a8e3a3199135154e97e1edd420e78a">$table</a>); </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    $this-&gt;attributsAttendus = array(); $testkeys = NULL;     </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    $this-&gt;schema = $this-&gt;<a class="code" href="../../d9/d12/class_ini_data.html#ac0eb41cb9195d4eeb28a9e155f9f1965">schemaTable</a>($this-&gt;table);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="comment">//Recherche du nom des cles FK ou PK qui représentent la ligne à preparer </span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="comment">//$valcle represente-t-il la valeur d&#39;une cle etrangére d&#39;une table?     </span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">foreach</span> ($this-&gt;schema as $champ=&gt;$option){</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      <span class="keywordflow">if</span> (($option[<span class="stringliteral">&quot;cleSecondaire&quot;</span>]) &amp;&amp; ($option[<span class="stringliteral">&quot;cleSecondaireRelie&quot;</span>] == $this-&gt;PPK)){</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        $this-&gt;nomClePK = $champ;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        $testkeys = 1;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">if</span> (empty($testkeys)){</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      <span class="keywordflow">foreach</span> ($this-&gt;schema as $champ=&gt;$option){ </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="keywordflow">if</span> ($option[<span class="stringliteral">&#39;clePrimaire&#39;</span>]) { </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;          $this-&gt;nomClePK = $champ; </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;          $testkeys = 1;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">if</span> (empty($testkeys)){ <span class="keywordflow">throw</span> <span class="keyword">new</span> MyPhpException(<span class="stringliteral">&quot;La table: &quot;</span>.$this-&gt;table.<span class="stringliteral">&quot; n&#39;a pas de clé primaire?&quot;</span>);}</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="comment">//construction et execution de la requete sql de selection selon la clé (PK ou FK)  </span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    $ptmq = <span class="stringliteral">&quot; = ? &quot;</span>;  </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    $whereSql = $this-&gt;nomClePK.$ptmq; </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    $fromSql = <a class="code" href="../../d9/d12/class_ini_data.html#ab4a8e3a3199135154e97e1edd420e78a">$this-&gt;table</a>;  </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="comment">//Recherche des attributs attendus dans la base de donnée, </span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    $this-&gt;attributsAttendus  = $this-&gt;<a class="code" href="../../d9/d12/class_ini_data.html#a047ba417fd692ef36e1eef675d0ff1aa">attributsTable</a>($this-&gt;table);    </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    $nbr = count($this-&gt;attributsAttendus);      </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="comment">//Boucle sur les attributs oblig et facul</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">foreach</span> ($this-&gt;attributsAttendus as $nomVal){    </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      ($idx &lt; ($nbr-1))?  $Sep = <span class="stringliteral">&quot;, &quot;</span>: $Sep = <span class="stringliteral">&quot; &quot;</span>; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;      $wagonSql .= $nomVal.$Sep;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      $idx++; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    $sql = <span class="stringliteral">&quot;SELECT $wagonSql FROM $fromSql WHERE $whereSql &quot;</span>;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    $stmt = $this-&gt;bd-&gt;prepare($sql);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    $stmt-&gt;execute(array($valcle));</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="comment">//le classement des donnees doit etre différent selon que il s&#39;agit d&#39;une table de &#39;liaison&#39; ou pas </span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordflow">if</span> ($this-&gt;table == $this-&gt;liaisonTable){</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;      <span class="keywordflow">while</span> ($ligne = $stmt-&gt;fetch(PDO::FETCH_ASSOC)){</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        $tableBaseCont[$x] = $ligne;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        $x++;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;      }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    }</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      <span class="keywordflow">while</span> ($ligne = $stmt-&gt;fetch(PDO::FETCH_ASSOC)){</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        $tableBaseCont = $ligne;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    $stmt = NULL;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordflow">return</span> $tableBaseCont;   </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  }</div>
+<div class="line"><a name="l00349"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#a544978504038610a700aa629ada5300a">  349</a></span>&#160;  <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#a544978504038610a700aa629ada5300a">dataClasse</a>($tableau,$FKey=NULL)</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  {</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    $drapstat = 0;  $clestatiques = $wagon = array();</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordflow">if</span> (!empty($FKey)) { $adhoCle = $FKey ; }</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">else</span> { $adhoCle = <a class="code" href="../../d9/d12/class_ini_data.html#ac2d92fa0847669f395ba2c555c557c2d">$this-&gt;PPK</a> ; }     </div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordflow">foreach</span> ($this-&gt;dynTables as $nom){         </div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      $this-&gt;table = $nom; </div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;      $this-&gt;schema = $this-&gt;<a class="code" href="../../d9/d12/class_ini_data.html#ac0eb41cb9195d4eeb28a9e155f9f1965">schemaTable</a>($this-&gt;table);    </div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      $this-&gt;attributsAttendus  = $this-&gt;<a class="code" href="../../d9/d12/class_ini_data.html#a047ba417fd692ef36e1eef675d0ff1aa">attributsTable</a>($this-&gt;table);    </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;      <span class="keywordflow">foreach</span> ($this-&gt;attributsAttendus as $nomVal){    </div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="keywordflow">if</span> (isset($tableau[$nomVal]) &amp;&amp; $tableau[$nomVal] === 0) {</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;          $wagon[<a class="code" href="../../d9/d12/class_ini_data.html#ab4a8e3a3199135154e97e1edd420e78a">$this-&gt;table</a>][$nomVal] = $tableau[$nomVal];</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        }        </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        elseif (!empty($tableau[$nomVal])) {        </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;          $valeurPropre =  $this-&gt;<a class="code" href="../../d1/d5e/class_gerer_data.html#a015af91831c4d2428fe527bd4abc672b">dataEntity</a>($tableau[$nomVal]);          </div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;          $wagon[<a class="code" href="../../d9/d12/class_ini_data.html#ab4a8e3a3199135154e97e1edd420e78a">$this-&gt;table</a>][$nomVal] = $valeurPropre;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        }</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;      }</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      <span class="keywordflow">foreach</span> ($this-&gt;schema as $champ=&gt;$option){</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <span class="keywordflow">if</span> (($option[<span class="stringliteral">&quot;cleSecondaire&quot;</span>]) &amp;&amp; ($option[<span class="stringliteral">&quot;cleSecondaireRelie&quot;</span>] == $adhoCle)){</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;          <span class="comment">//valeur symbolique(son nom) maintenant          </span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;          $wagon[<a class="code" href="../../d9/d12/class_ini_data.html#ab4a8e3a3199135154e97e1edd420e78a">$this-&gt;table</a>][$champ] = $option[<span class="stringliteral">&quot;cleSecondaireRelie&quot;</span>];  </div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      }</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    }</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordflow">foreach</span> ($this-&gt;dataContexte as $cont=&gt;$opt) { </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;      <span class="keywordflow">if</span> (!empty($opt[<span class="stringliteral">&#39;data&#39;</span>])) { $drapstat++ ; }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    }</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordflow">if</span> (!empty($drapstat)){</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;      $this-&gt;table = <a class="code" href="../../d9/d12/class_ini_data.html#aa8e9751490a4545746ed011c518d5759">$this-&gt;liaisonTable</a>;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;      $this-&gt;cleSchemaDataStat = array_keys($this-&gt;schemaDataStatique);</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      $cpt = 0;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      <span class="keywordflow">foreach</span> ($tableau as $stat=&gt;$valeur){  </div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordflow">if</span> (in_array($stat,$this-&gt;cleSchemaDataStat)){    </div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;          $dataStatique[$cpt] = $this-&gt;<a class="code" href="../../d1/d5e/class_gerer_data.html#ac7ffe856b01d77697e8323cead2b56ec">chargeDataStat</a>($stat,$valeur);</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;          $cpt++;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        }</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;      }        </div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;      <span class="keywordflow">if</span> (empty($cpt)) { $dataStatique[0] = $this-&gt;<a class="code" href="../../d1/d5e/class_gerer_data.html#ac7ffe856b01d77697e8323cead2b56ec">chargeDataStat</a>();} </div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      <span class="keywordflow">foreach</span> ($dataStatique as $id=&gt;$ligne){    </div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        $wagon[<a class="code" href="../../d9/d12/class_ini_data.html#ab4a8e3a3199135154e97e1edd420e78a">$this-&gt;table</a>][$id] = $ligne;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;      } </div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    }</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordflow">return</span> $wagon;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;  }</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
+<div class="line"><a name="l00412"></a><span class="lineno"><a class="line" href="../../d1/d5e/class_gerer_data.html#ac7ffe856b01d77697e8323cead2b56ec">  412</a></span>&#160;  <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="../../d1/d5e/class_gerer_data.html#ac7ffe856b01d77697e8323cead2b56ec">chargeDataStat</a>($nom=NULL,$valeur=NULL)</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  {</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    $tableaustat = array(); $laclefk = array();</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="comment">//aucuns choix statique mais le contexte statique existe bien                  </span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordflow">if</span> (!$nom || !$valeur) { </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;      <span class="comment">//Parcourir le tableau des cles etrangéres du contexte   </span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;      <span class="keywordflow">foreach</span> ($this-&gt;liensCles as $name=&gt;$val){  </div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="comment">//Détecter les cles FK de $this-&gt;liensCles presentent dans $this-&gt;schemaLiaison        </span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        <span class="keywordflow">if</span> (isset($this-&gt;schemaLiaison[$name])){</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;          <span class="comment">//Détection du nom de la FK qui pointe vers le PPK du contexte </span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;          <span class="keywordflow">if</span> ($this-&gt;schemaLiaison[$name][<span class="stringliteral">&quot;cleSecondaireRelie&quot;</span>] == $this-&gt;PPK){ </div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            $tableaustat[$name] = $val;  </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;          }</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;          <span class="keywordflow">else</span> {  </div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;          <span class="comment">//Une valeur par default du champ ad hoc doit exister pour la cle qui pointe pas sur PPK       </span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            $tableaustat[$name] = $this-&gt;schemaLiaison[$name][<span class="stringliteral">&#39;default&#39;</span>]; </div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;          }</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        }      </div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;      }</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;      <span class="comment">//Si des champs spécifiques é la table de liaison existent </span></div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;      <span class="keywordflow">if</span> (! empty($this-&gt;liaisonChamps)) {</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <span class="keywordflow">foreach</span> ($this-&gt;liaisonChamps as $champ){ </div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;          $tableaustat[$champ] = $this-&gt;schemaLiaison[$champ][<span class="stringliteral">&#39;default&#39;</span>];  </div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        }</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;      }</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    }</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordflow">else</span> {          </div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;      <span class="comment">//detecter la table de liaison, le nom et la valeur de la FK de la table de liaison </span></div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;      <span class="comment">//qui pointent vers les valeurs &#39;Statiques&#39;  </span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;      $this-&gt;tableLi = $this-&gt;schemaDataStatique[$nom][<span class="stringliteral">&#39;tableLiaison&#39;</span>];            </div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;      $this-&gt;cleStat = $this-&gt;schemaDataStatique[$nom][<span class="stringliteral">&#39;cleLiaison&#39;</span>];          </div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;      $this-&gt;valCleStat = $this-&gt;schemaDataStatique[$nom][<span class="stringliteral">&#39;valCleLiaison&#39;</span>];         </div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;      <span class="comment">//detecter le nom de la FK de liaison qui pointe sur la PPK         </span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;      <span class="keywordflow">foreach</span> ($this-&gt;liaisonFK as $num=&gt;$cle){</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        <span class="keywordflow">if</span> ($cle != $this-&gt;cleStat){ </div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;          $this-&gt;ofk = $cle;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;          $this-&gt;valofk = $this-&gt;liaisonFKP[$num];  <span class="comment">//ici, rien que le &#39;nom&#39;de la cle </span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        }</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;      }</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;      $tableaustat[<a class="code" href="../../d1/d5e/class_gerer_data.html#a88d1f7fad733491bae70bc55262ce7bd">$this-&gt;cleStat</a>] = $this-&gt;valCleStat; <span class="comment">//la cle FK statique et sa valeur reelle</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;      $tableaustat[<a class="code" href="../../d1/d5e/class_gerer_data.html#a38db42d4e096fde44cc1d6d1c4d5f3c2">$this-&gt;ofk</a>] = <a class="code" href="../../d1/d5e/class_gerer_data.html#a0d313a277e6de3eb2ffe5b4527aaac9c">$this-&gt;valofk</a>;         <span class="comment">//la cle PPK et le nom de la PPK en valeur</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;      </div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;      <span class="comment">//relie &#39;valeur&#39;(statique) fournie en paramétre aux champs de &#39;liaison&#39; sur la table de liaison :</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;      <span class="comment">//Une &#39;valeur statique&#39; établi une relation avec une valeur champ &#39;specifique&#39; sur la table de liaison  </span></div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;      <span class="keywordflow">if</span> (!empty($this-&gt;statiqueValeurs)) {         </div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        <span class="keywordflow">foreach</span> ($this-&gt;statiqueValeurs as $idx=&gt;$mot){   </div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;          <span class="keywordflow">if</span> ($mot == $valeur){ </div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;            <span class="comment">//$this-&gt;champUtile &lt;- le nom ad hoc du champ de liaison</span></div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;            <span class="comment">//$this-&gt;valChampUtile &lt;- la valeur de &#39;liaison&#39; ad hoc (unique pour le contexte membre)</span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;            $this-&gt;champUtile = $this-&gt;liaisonChamps[$idx];  </div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;            $this-&gt;valChampUtile = <a class="code" href="../../d9/d12/class_ini_data.html#a8a13ab8c18f7a9c8660993c7335501d5">$this-&gt;liaisonValeurs</a>;</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;            $idxchamp = $idx;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;          } </div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        }</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        <span class="comment">//detection du champ specifique de table de liaison  non choisi en parametre et de sa valeur  </span></div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        <span class="keywordflow">switch</span>($idxchamp){ </div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;          <span class="keywordflow">case</span> 0:        </div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            $this-&gt;champInutile = $this-&gt;liaisonChamps[1];</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;            $this-&gt;valChampInutile = $this-&gt;schemaLiaison[<a class="code" href="../../d1/d5e/class_gerer_data.html#a5ac9cbb4c20bcb3f4076546dc104d53b">$this-&gt;champInutile</a>][<span class="stringliteral">&#39;default&#39;</span>];</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;          <span class="keywordflow">case</span> 1: </div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;            $this-&gt;champInutile = $this-&gt;liaisonChamps[0];</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;            $this-&gt;valChampInutile = <a class="code" href="../../d9/d12/class_ini_data.html#a8a13ab8c18f7a9c8660993c7335501d5">$this-&gt;liaisonValeurs</a>; <span class="comment">//ici: utilisation = &#39;oui&#39; et abonne = &#39;oui&#39;</span></div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;            <span class="keywordflow">break</span>; </div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        }</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        $tableaustat[<a class="code" href="../../d1/d5e/class_gerer_data.html#af24bdb4a408848058b0a2e17e009bc10">$this-&gt;champUtile</a>] = <a class="code" href="../../d1/d5e/class_gerer_data.html#a8102e606dfcee9258772c329928380b4">$this-&gt;valChampUtile</a>;</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        $tableaustat[<a class="code" href="../../d1/d5e/class_gerer_data.html#a5ac9cbb4c20bcb3f4076546dc104d53b">$this-&gt;champInutile</a>] = $this-&gt;valChampInutile;      </div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;      }</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    }</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    <span class="keywordflow">return</span> $tableaustat;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;  }</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;}</div>
+<div class="ttc" id="class_gerer_data_html_a278b894a5fae3d133f4e1310f74747f1"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a278b894a5fae3d133f4e1310f74747f1">GererData\getmaGpc</a></div><div class="ttdeci">getmaGpc($tableau)</div><div class="ttdoc">stripslashes les données extraites de la database </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00217">GererData.class.php:217</a></div></div>
+<div class="ttc" id="class_ini_data_html_a58606f8666f130e28679424c20e5448f"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#a58606f8666f130e28679424c20e5448f">IniData\$statiqueValeurs</a></div><div class="ttdeci">$statiqueValeurs</div><div class="ttdoc">valeurs que peuvent prendre un champ sql &#39;statique&#39; </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00076">IniData.class.php:76</a></div></div>
+<div class="ttc" id="class_ini_data_html_ad3e47d712fcaf6b7892452c9b808ee2e"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#ad3e47d712fcaf6b7892452c9b808ee2e">IniData\$dataFacul</a></div><div class="ttdeci">$dataFacul</div><div class="ttdoc">tableau des colonnes facultatives </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00035">IniData.class.php:35</a></div></div>
+<div class="ttc" id="class_gerer_data_html_af63960112e4a2615ee88ef95c3a7d632"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#af63960112e4a2615ee88ef95c3a7d632">GererData\$nomCleFK</a></div><div class="ttdeci">$nomCleFK</div><div class="ttdoc">nom d&#39;une cle FK pointant vers la PPK </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00025">GererData.class.php:25</a></div></div>
+<div class="ttc" id="class_ini_data_html_a8a13ab8c18f7a9c8660993c7335501d5"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#a8a13ab8c18f7a9c8660993c7335501d5">IniData\$liaisonValeurs</a></div><div class="ttdeci">$liaisonValeurs</div><div class="ttdoc">valeur des colonnes supplémentaires sur table de liaison </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00058">IniData.class.php:58</a></div></div>
+<div class="ttc" id="class_gerer_data_html_acce63ef42e8d8352a5df19f2f72add0f"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#acce63ef42e8d8352a5df19f2f72add0f">GererData\preparation</a></div><div class="ttdeci">preparation($valcle, $table)</div><div class="ttdoc">crée et retourne un tableau par ligne de Table </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00270">GererData.class.php:270</a></div></div>
+<div class="ttc" id="class_ini_data_html_a8bab3c9f042caa7e8d7c94d076157645"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#a8bab3c9f042caa7e8d7c94d076157645">IniData\$dataVue</a></div><div class="ttdeci">$dataVue</div><div class="ttdoc">tableau des colonnes pour une VUE </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00036">IniData.class.php:36</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a853b90674cd5e73a4742f581e49db32e"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a853b90674cd5e73a4742f581e49db32e">GererData\$valPPK</a></div><div class="ttdeci">$valPPK</div><div class="ttdoc">valeur de la PPK </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00032">GererData.class.php:32</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a087693a2870ed1ae91b49d4a4bb72f15"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a087693a2870ed1ae91b49d4a4bb72f15">GererData\getDataContexte</a></div><div class="ttdeci">getDataContexte()</div><div class="ttdoc">Charger le tableau du contexte et du statut en cours (pas de contexte ni de statut fourni) ...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00064">GererData.class.php:64</a></div></div>
+<div class="ttc" id="class_ini_data_html_af43b62b0f49c24eb4cb4ee5d9a1e4743"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#af43b62b0f49c24eb4cb4ee5d9a1e4743">IniData\$schemaDataPassive</a></div><div class="ttdeci">$schemaDataPassive</div><div class="ttdoc">tableau résultat de calculDataPassive() </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00071">IniData.class.php:71</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a9c8d7af07f62cabe0ba8d1c2aec62b30"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a9c8d7af07f62cabe0ba8d1c2aec62b30">GererData\$nomContexte</a></div><div class="ttdeci">$nomContexte</div><div class="ttdoc">nom du contexte </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00026">GererData.class.php:26</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a5d973ca2a23223098c9027be30a5a6e3"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a5d973ca2a23223098c9027be30a5a6e3">GererData\getListeAttr</a></div><div class="ttdeci">getListeAttr()</div><div class="ttdoc">la liste des attributs obligatoires et facultatifs liés au contexte </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00158">GererData.class.php:158</a></div></div>
+<div class="ttc" id="class_ini_data_html_a2bf668097a6ffbe2070ba264c316debb"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#a2bf668097a6ffbe2070ba264c316debb">IniData\$bd</a></div><div class="ttdeci">$bd</div><div class="ttdoc">ressource Mysql </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00030">IniData.class.php:30</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a88d1f7fad733491bae70bc55262ce7bd"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a88d1f7fad733491bae70bc55262ce7bd">GererData\$cleStat</a></div><div class="ttdeci">$cleStat</div><div class="ttdoc">le nom de la FK (de liaison) qui pointe la PK de table statique&#39; </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00022">GererData.class.php:22</a></div></div>
+<div class="ttc" id="class_ini_data_html_aa8e9751490a4545746ed011c518d5759"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#aa8e9751490a4545746ed011c518d5759">IniData\$liaisonTable</a></div><div class="ttdeci">$liaisonTable</div><div class="ttdoc">nom d&#39;une table sql de liaison </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00054">IniData.class.php:54</a></div></div>
+<div class="ttc" id="class_gerer_data_html_aa029c9e28f3f98c660666eea10d0c1cf"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#aa029c9e28f3f98c660666eea10d0c1cf">GererData\getPPK</a></div><div class="ttdeci">getPPK()</div><div class="ttdoc">Le nom de la premiere PK de la premiere table dynamique d&#39;un contexte. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00137">GererData.class.php:137</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a0d313a277e6de3eb2ffe5b4527aaac9c"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a0d313a277e6de3eb2ffe5b4527aaac9c">GererData\$valofk</a></div><div class="ttdeci">$valofk</div><div class="ttdoc">valeur de la other foreign key (ofk) </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00031">GererData.class.php:31</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a8102e606dfcee9258772c329928380b4"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a8102e606dfcee9258772c329928380b4">GererData\$valChampUtile</a></div><div class="ttdeci">$valChampUtile</div><div class="ttdoc">string, valeur employée par la colonne de liaison </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00029">GererData.class.php:29</a></div></div>
+<div class="ttc" id="class_ini_data_html_a3947197afbe1f1849e2911d4abc46c74"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#a3947197afbe1f1849e2911d4abc46c74">IniData\$extraTable</a></div><div class="ttdeci">$extraTable</div><div class="ttdoc">tableau des tables &#39;extra&#39; dans contexte.ini </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00042">IniData.class.php:42</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a2a973a399e8d31df44ebce6228b3e481"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a2a973a399e8d31df44ebce6228b3e481">GererData\getCnx</a></div><div class="ttdeci">getCnx()</div><div class="ttdoc">Une instance de l&#39;objet de connexion à la Base de Donnée (BD) </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00151">GererData.class.php:151</a></div></div>
+<div class="ttc" id="class_ini_data_html_ac2d92fa0847669f395ba2c555c557c2d"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#ac2d92fa0847669f395ba2c555c557c2d">IniData\$PPK</a></div><div class="ttdeci">$PPK</div><div class="ttdoc">nom de la cle Primaire Principale du contexte </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00062">IniData.class.php:62</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a2b9868af7c052e261c94cb94df1bfcbe"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a2b9868af7c052e261c94cb94df1bfcbe">GererData\getVue</a></div><div class="ttdeci">getVue()</div><div class="ttdoc">la liste des champs pour organiser la vue d&#39;un contexte (selon son statut) </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00211">GererData.class.php:211</a></div></div>
+<div class="ttc" id="class_gerer_data_html_afecf35ba17476247294379f5ccb19908"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#afecf35ba17476247294379f5ccb19908">GererData\getExtraTable</a></div><div class="ttdeci">getExtraTable()</div><div class="ttdoc">Appel des noms des tables extra du contexte et statut en cours. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00129">GererData.class.php:129</a></div></div>
+<div class="ttc" id="class_gerer_data_html_ae0738908b8baec44815b18f10dbe73c3"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#ae0738908b8baec44815b18f10dbe73c3">GererData\$attributsAttendus</a></div><div class="ttdeci">$attributsAttendus</div><div class="ttdoc">pour appeller la méthode parente attributsTable </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00018">GererData.class.php:18</a></div></div>
+<div class="ttc" id="class_ini_data_html_a9e2129648d3b2c589f300c5f95e86598"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#a9e2129648d3b2c589f300c5f95e86598">IniData\$contexte</a></div><div class="ttdeci">$contexte</div><div class="ttdoc">string le nom d&#39;un contexte précis </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00032">IniData.class.php:32</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a3607d383f86fd49c96df8bd7c15bc9de"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a3607d383f86fd49c96df8bd7c15bc9de">GererData\getTables</a></div><div class="ttdeci">getTables($dyn=NULL)</div><div class="ttdoc">Appel parent::getTables() </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00099">GererData.class.php:99</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a544978504038610a700aa629ada5300a"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a544978504038610a700aa629ada5300a">GererData\dataClasse</a></div><div class="ttdeci">dataClasse($tableau, $FKey=NULL)</div><div class="ttdoc">Une methode qui classe les DONNEES CLIENTES (prealablement filtrees par une action du controleur) par...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00349">GererData.class.php:349</a></div></div>
+<div class="ttc" id="class_ini_data_html_aab71b854b74293be269682b283839478"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#aab71b854b74293be269682b283839478">IniData\$dataContexte</a></div><div class="ttdeci">$dataContexte</div><div class="ttdoc">tableau fourni par methode chargerContexte </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00033">IniData.class.php:33</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a066ebc506b14934078f527c186da827a"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a066ebc506b14934078f527c186da827a">GererData\$lastId</a></div><div class="ttdeci">$lastId</div><div class="ttdoc">integer, mémoriser le dernière PK introduite </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00023">GererData.class.php:23</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a6ffbc18d7d53802ab5707d716e116f53"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a6ffbc18d7d53802ab5707d716e116f53">GererData\getSchemaDataPassive</a></div><div class="ttdeci">getSchemaDataPassive()</div><div class="ttdoc">La tableau calculé par parent::chargerContexte() sur base des données passives du fichier de contexte...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00204">GererData.class.php:204</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a38c737dae22cd3b2bed57cee2f25acf0"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a38c737dae22cd3b2bed57cee2f25acf0">GererData\getDataTable</a></div><div class="ttdeci">getDataTable($table, $flag=NULL)</div><div class="ttdoc">Charger le schéma d&#39;une table. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00227">GererData.class.php:227</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a29eb8afaefbdab1771e6aa20bd7d9b8d"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a29eb8afaefbdab1771e6aa20bd7d9b8d">GererData\getFaculDyn</a></div><div class="ttdeci">getFaculDyn()</div><div class="ttdoc">la liste des attributs facultatifs des tables dynamiques </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00182">GererData.class.php:182</a></div></div>
+<div class="ttc" id="class_gerer_data_html_afdc10e973ab64135bfd62eb8a36112bc"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#afdc10e973ab64135bfd62eb8a36112bc">GererData\getDynTables</a></div><div class="ttdeci">getDynTables()</div><div class="ttdoc">Appel de la liste des tables dynamiques du contexte. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00106">GererData.class.php:106</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a705ef399818fa9d328be335f6faf281e"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a705ef399818fa9d328be335f6faf281e">GererData\getLiensCles</a></div><div class="ttdeci">getLiensCles()</div><div class="ttdoc">Appel parent::$this-&gt;liensCles. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00085">GererData.class.php:85</a></div></div>
+<div class="ttc" id="class_ini_data_html_a047ba417fd692ef36e1eef675d0ff1aa"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#a047ba417fd692ef36e1eef675d0ff1aa">IniData\attributsTable</a></div><div class="ttdeci">attributsTable($nom_table)</div><div class="ttdoc">l&#39;ensemble des donnees requises et facul pour une table. </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00732">IniData.class.php:732</a></div></div>
+<div class="ttc" id="class_gerer_data_html_ac7ffe856b01d77697e8323cead2b56ec"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#ac7ffe856b01d77697e8323cead2b56ec">GererData\chargeDataStat</a></div><div class="ttdeci">chargeDataStat($nom=NULL, $valeur=NULL)</div><div class="ttdoc">Cette methode classe des valeurs clients &#39;statiques&#39; perçues pour un traitement ad hoc en table de li...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00412">GererData.class.php:412</a></div></div>
+<div class="ttc" id="class_ini_data_html_aa208b5e1dcec332b38c53e8f0c350811"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#aa208b5e1dcec332b38c53e8f0c350811">IniData\magicNormHTTP</a></div><div class="ttdeci">magicNormHTTP($tableau)</div><div class="ttdoc">Traitement des échappement automatiques. </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00678">IniData.class.php:678</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a37570bbef652266723a60caed6a25df7"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a37570bbef652266723a60caed6a25df7">GererData\$classement</a></div><div class="ttdeci">$classement</div><div class="ttdoc">pour classer données, utilisé par inscrire, mettreajour </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00021">GererData.class.php:21</a></div></div>
+<div class="ttc" id="class_ini_data_html_ab4a8e3a3199135154e97e1edd420e78a"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#ab4a8e3a3199135154e97e1edd420e78a">IniData\$table</a></div><div class="ttdeci">$table</div><div class="ttdoc">nom d&#39;une table sql </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00077">IniData.class.php:77</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a5ac9cbb4c20bcb3f4076546dc104d53b"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a5ac9cbb4c20bcb3f4076546dc104d53b">GererData\$champInutile</a></div><div class="ttdeci">$champInutile</div><div class="ttdoc">string, le nom de la colonne de liaison non employée </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00020">GererData.class.php:20</a></div></div>
+<div class="ttc" id="class_ini_data_html_ac0eb41cb9195d4eeb28a9e155f9f1965"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#ac0eb41cb9195d4eeb28a9e155f9f1965">IniData\schemaTable</a></div><div class="ttdeci">schemaTable($nom_table)</div><div class="ttdoc">Execute la méthode privee showColumns ou lit le fichier .ini. </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00657">IniData.class.php:657</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a93098ed96a10a1ec387588f06e0d160f"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a93098ed96a10a1ec387588f06e0d160f">GererData\getExtraFK</a></div><div class="ttdeci">getExtraFK()</div><div class="ttdoc">Appel du tableau des clés FK classées [extra] dans le contexte.ini. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00144">GererData.class.php:144</a></div></div>
+<div class="ttc" id="class_gerer_data_html"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html">GererData</a></div><div class="ttdoc">traitement en database des actions sql (insertion, mise à jour, suppression, sélection) des données e...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00015">GererData.class.php:15</a></div></div>
+<div class="ttc" id="class_ini_data_html_a2d400f9e08272d8d42df32717d0217e4"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#a2d400f9e08272d8d42df32717d0217e4">IniData\$liensCles</a></div><div class="ttdeci">$liensCles</div><div class="ttdoc">tableau avec toutes les Foreign Key(FK) du contexte </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00059">IniData.class.php:59</a></div></div>
+<div class="ttc" id="class_ini_data_html_aa5debdb64b07c259f3406f90e8c331ea"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#aa5debdb64b07c259f3406f90e8c331ea">IniData\$extraFK</a></div><div class="ttdeci">$extraFK</div><div class="ttdoc">tableau des clés FK &#39;extra&#39; </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00043">IniData.class.php:43</a></div></div>
+<div class="ttc" id="class_ini_data_html_a224bac6bff01494b4097e3e4f23b6537"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#a224bac6bff01494b4097e3e4f23b6537">IniData\$statut</a></div><div class="ttdeci">$statut</div><div class="ttdoc">statut de fonctionnement du système </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00072">IniData.class.php:72</a></div></div>
+<div class="ttc" id="class_gerer_data_html_acec5eaf2a508ace18831bc80e69a9b13"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#acec5eaf2a508ace18831bc80e69a9b13">GererData\$nomClePK</a></div><div class="ttdeci">$nomClePK</div><div class="ttdoc">nom de la Principal Primary Key (PPK) </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00024">GererData.class.php:24</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a66c9ee14e10c5e6fffabbeccf16f67ec"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a66c9ee14e10c5e6fffabbeccf16f67ec">GererData\getPassiveTable</a></div><div class="ttdeci">getPassiveTable()</div><div class="ttdoc">Appel parent::getPassiveTable() </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00114">GererData.class.php:114</a></div></div>
+<div class="ttc" id="class_gerer_data_html_af24bdb4a408848058b0a2e17e009bc10"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#af24bdb4a408848058b0a2e17e009bc10">GererData\$champUtile</a></div><div class="ttdeci">$champUtile</div><div class="ttdoc">string, le nom de la colonne de liaison employée </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00019">GererData.class.php:19</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a371ee4003fd4a85a1b5bd0220cafb953"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a371ee4003fd4a85a1b5bd0220cafb953">GererData\getOblig</a></div><div class="ttdeci">getOblig()</div><div class="ttdoc">la liste des attributs obligatoires au contexte </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00166">GererData.class.php:166</a></div></div>
+<div class="ttc" id="class_gerer_data_html_af71cb18e60dda03e071df36d0963b7d1"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#af71cb18e60dda03e071df36d0963b7d1">GererData\getArrayContextes</a></div><div class="ttdeci">getArrayContextes()</div><div class="ttdoc">Tableau liste des contextes. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00092">GererData.class.php:92</a></div></div>
+<div class="ttc" id="class_gerer_data_html_aae2267b462281b6932d31d8e50a0d01b"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#aae2267b462281b6932d31d8e50a0d01b">GererData\getGeneral</a></div><div class="ttdeci">getGeneral($type)</div><div class="ttdoc">Récupérer les variables fixes Hors-Antenne,Hors-Region et $mail. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00238">GererData.class.php:238</a></div></div>
+<div class="ttc" id="class_ini_data_html"><div class="ttname"><a href="../../d9/d12/class_ini_data.html">IniData</a></div><div class="ttdoc">initier la connexion à DB et charger le bon contexte. </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00025">IniData.class.php:25</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a161d9e09131c8cb737c6f08263dcbe22"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a161d9e09131c8cb737c6f08263dcbe22">GererData\getStatiqueValeurs</a></div><div class="ttdeci">getStatiqueValeurs()</div><div class="ttdoc">La liste des valeurs [statiques] calculé par parent::chargerContexte($contexte,$statut) ...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00190">GererData.class.php:190</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a244c58909b418917a589d626ffdec2f1"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a244c58909b418917a589d626ffdec2f1">GererData\getSchemaDataStatique</a></div><div class="ttdeci">getSchemaDataStatique()</div><div class="ttdoc">La tableau calculé par parent::chargerContexte() sur base des données statiques du fichier du context...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00197">GererData.class.php:197</a></div></div>
+<div class="ttc" id="class_gerer_data_html_ac12059294c9392582403cf408b61d951"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#ac12059294c9392582403cf408b61d951">GererData\$tableLi</a></div><div class="ttdeci">$tableLi</div><div class="ttdoc">nom de la table de liaison </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00028">GererData.class.php:28</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a38db42d4e096fde44cc1d6d1c4d5f3c2"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a38db42d4e096fde44cc1d6d1c4d5f3c2">GererData\$ofk</a></div><div class="ttdeci">$ofk</div><div class="ttdoc">other foreign key, nom de cle FK qui ne pointe pas sur une PK de table statique </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00027">GererData.class.php:27</a></div></div>
+<div class="ttc" id="class_ini_data_html_a7514b56e424ed4485a4042e2a3e0ae70"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#a7514b56e424ed4485a4042e2a3e0ae70">IniData\$schemaDataStatique</a></div><div class="ttdeci">$schemaDataStatique</div><div class="ttdoc">tableau resultat de calculDataStatique() </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00070">IniData.class.php:70</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a489d9a68560c78c6cd4018d81f1b3f4b"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a489d9a68560c78c6cd4018d81f1b3f4b">GererData\resetContexte</a></div><div class="ttdeci">resetContexte($contexte, $statut)</div><div class="ttdoc">Appel de parent::rechargerContexte($contexte,$statut). </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00071">GererData.class.php:71</a></div></div>
+<div class="ttc" id="class_ini_data_html_a08f4ea96fa476dd39b052f5d7ae5810a"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#a08f4ea96fa476dd39b052f5d7ae5810a">IniData\chargerContexte</a></div><div class="ttdeci">chargerContexte($contexte, $statut)</div><div class="ttdoc">Chargement du fichier $this-&gt;fileContexte, crée un fichier .ini pour tout le contexte (multi table)...</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00370">IniData.class.php:370</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a90b37cb80ea6b2d50a97ab76deff0151"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a90b37cb80ea6b2d50a97ab76deff0151">GererData\getContexte</a></div><div class="ttdeci">getContexte($contexte, $statut)</div><div class="ttdoc">Charger le contexte selon un contexte et un statut,. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00057">GererData.class.php:57</a></div></div>
+<div class="ttc" id="class_ini_data_html_ab0d9d34c94832a4e0521aa824425c221"><div class="ttname"><a href="../../d9/d12/class_ini_data.html#ab0d9d34c94832a4e0521aa824425c221">IniData\$arrayContextes</a></div><div class="ttdeci">$arrayContextes</div><div class="ttdoc">tableau des contextes </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d30/_ini_data_8class_8php_source.html#l00029">IniData.class.php:29</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a86948bd39802d2e110ec0128feb71268"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a86948bd39802d2e110ec0128feb71268">GererData\getFaculFull</a></div><div class="ttdeci">getFaculFull()</div><div class="ttdoc">la liste de tous les attributs Facul possibles (les statiques compris) </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00174">GererData.class.php:174</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a015af91831c4d2428fe527bd4abc672b"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a015af91831c4d2428fe527bd4abc672b">GererData\dataEntity</a></div><div class="ttdeci">dataEntity($chaine)</div><div class="ttdoc">converti les elements html en entites html </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00254">GererData.class.php:254</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a51daa6c8f6bfa3f1c182fe62f66dc05e"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a51daa6c8f6bfa3f1c182fe62f66dc05e">GererData\$valChampinutile</a></div><div class="ttdeci">$valChampinutile</div><div class="ttdoc">string, valeur attribuée à la colonne de liaison non utilisée </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00030">GererData.class.php:30</a></div></div>
+<div class="ttc" id="class_gerer_data_html_a23f351cc3ddb52292e89dd93e5dfdee3"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#a23f351cc3ddb52292e89dd93e5dfdee3">GererData\getLiaisonTable</a></div><div class="ttdeci">getLiaisonTable()</div><div class="ttdoc">Appel du nom de la table de liaison selon contexte et statut en cours. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00122">GererData.class.php:122</a></div></div>
+<div class="ttc" id="class_gerer_data_html_ac33b9b491b3e1d7f7d476aba69fced86"><div class="ttname"><a href="../../d1/d5e/class_gerer_data.html#ac33b9b491b3e1d7f7d476aba69fced86">GererData\__construct</a></div><div class="ttdeci">__construct($contexte=NULL, $statut=NULL)</div><div class="ttdoc">construct réalise quelques initiations puis appelle la méthode parent. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dea/_gerer_data_8class_8php_source.html#l00036">GererData.class.php:36</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d767fe22b57159f4fd787213b96ce7d5.html">vapspace</a></li><li class="navelem"><a class="el" href="../../dir_76f06f0a155a1018742715756bfdb8f4.html">vaplib</a></li><li class="navelem"><a class="el" href="../../d4/dea/_gerer_data_8class_8php.html">GererData.class.php</a></li>
+    <li class="footer">Généré le Jeudi 11 Septembre 2014 17:18:15 pour Vapspace par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>
