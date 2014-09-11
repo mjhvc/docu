@@ -1,0 +1,49 @@
+/**
+\page sqlini.dox
+
+	Le fichier vapdata/contextes/Sql.ini:
+	- Charge la bonne regex selon le contexte et la colonne sql 
+		+ colonnes est la liste des champs sql
+		+ rgx est le nom d'une regex à charger via le fichier : vaplib/libRgx.php
+	- colonnes et rgx sont classés par ['sql'.'nomDuContexte']	
+	- Il y a correspondance verticale entre les listes (exemple: idhum correspond à rgxInt)
+
+~~~
+[sqlHum]
+colonnes=idhum,lienreg,genre,nom,prenom,adresse,ville,code,pays,mail,tel,naissance,passe,statut,lang
+rgx=rgxInt,rgxInt,rgxAlpha,rgxNom,rgxNom,rgxAdres,rgxNom,rgxInt,rgxNom,rgxMail,rgxTel,rgxInt,rgxPass,rgxMin,rgxMin
+[sqlCore]
+colonnes=idvap,lienperso,lienant,securite,membre,plaque,numbr,inscrit,cachet,reserve,connu,news,fiche,iter_compta
+rgx=rgxInt,rgxInt,rgxInt,rgxMin,rgxMbr,rgxPlaque,rgxInt,rgxAlpha,rgxDate,rgxNom,rgxNom,rgxMin,rgxMin,rgxInt
+[sqlAnt]
+colonnes=idant,lienreg,nomantenne
+rgx=rgxInt,rgxInt,rgxAdres
+[sqlTranspu]
+colonnes=idtrans,societes
+rgx=rgxInt,rgxNom
+[sqlMobi]
+colonnes=idmob,lienhum,lientrans,utilisation,abonne
+rgx=rgxInt ,rgxInt,rgxInt,rgxMin,rgxMin
+[sqlChat]
+colonnes=idchat,idpere,lienhum,lienant,vapattache,vaputile,chatmail,pseudo,sujet,message,poste
+rgx=rgxInt,rgxInt,rgxInt,rgxInt,rgxAdres,rgxAlpha,rgxMail,rgxNom,rgxSujet,rgxGlob,rgxInt
+[sqlNews]
+colonnes=idnews,expediteur,commanditaire,sujet,contenu,altcontenu,destinataires,achemines,active,couleurfond,couleurpolice,couleurtitre,envoye
+rgx=rgxInt,rgxMail,rgxMail,rgxSujet,rgxGlob,rgxGlob,rgxInt,rgxInt,rgxBin,rgxHexa,rgxHexa,rgxHexa,rgxDate
+[sqlFile]
+colonnes=idFile,nomFile,descFile,pathFile,dateFile,sizeFile
+rgx=rgxInt,rgxFile,rgxSujet,rgxPath,rgxDate,rgxInt
+[sqlRegions]
+colonnes=idreg,nomregion,province
+rgx=rgxInt,rgxNom,rgxNom
+[sqlPassage]
+colonnes=idpass,lienant,lieu,poste,compta,offre,demande
+rgx=rgxInt,rgxInt,rgxAdres,rgxInt,rgxInt,rgxInt,rgxInt
+[sqlTrajet]
+colonnes=idtraj,lienhum,lienpass,lienant,commune,destination,periode,poste,deal,compta
+rgx=rgxInt,rgxInt,rgxInt,rgxInt,rgxNom,rgxAdres,rgxAdres,rgxInt,rgxMin,rgxInt
+~~~
+
+
+
+*/

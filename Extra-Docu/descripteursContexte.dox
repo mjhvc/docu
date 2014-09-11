@@ -1,0 +1,37 @@
+/**
+ \page descripteursContexte.dox
+=============================================
+ 
+ 	Chaque descripteur de contexte est 
+	- un fichier 'nomDuContexte.ini' à double structure [section][champ=valeur]
+	- placé dans vapdata/contextes
+ 	
+	Ils comportent tous 
+ 	-	Une section [general] avec
+ 		+	nom : le nom du contexte
+ 		+ mail : un mail de contact général
+ 		+ horsAntenne : la clé Primaire (id) de l'antenne 'horsAntene'
+ 		+ horsRegion : la clé Primaire (id) de la région 'horsRegion' 
+ 	- Une section [dynamique] qui décrit la-les tables sql principale(s) du contexte avec comme champs:
+ 		+ tables= le nom de(s) tables 'dynamiques'
+ 		+ PK= le nom du champ sql formant la clé primaire de la première table (appelée dans le code Principal Prymary Key ou PKK)
+ 		+ FK= la clé étrangère des tables dynamiques suivantes
+ 		+ FKP= le nom de la PKK vers laquelle pointe les FK ci-dessus
+ 	- Une section par statut : anonym, membre,responsable,admin, avec : 
+ 		+	les noms de champs  obligatoire (oblig) et facultatifs (facul)
+ 		+ une liste de champ à placer dans la vue par statut
+	- Certains contextes nécéssitent des sections décrivant les interractions sql entre tables :
+ 		+ [extra] : si la-les table(s) dynamiques possède(nt) une ou des Foreign Keys
+ 		+ [statique] : si relation sql multi2multi, une autre table source de  donnees necessaires au contexte 
+ 		+ [liaison] : si relation sql: multi2multi, la table de liaison entre la table 'dynamique' et la table 'statique'   
+ 		+ [passive] : si liaison sql multi2one, rajoute des valeurs liées à des champs sql d'une autre table 
+
+		Quand la section [dynamique][tables] est plurielle, il doit y avoir une correspondance horizontale entre [tables] et [PK], la première valeur de PK doit correspondre à la première valeur de [tables].
+		
+		Cette astuce de correspondance horizontale est également utilisée dans les sections facultatives[extra],[statique] et [liaison]
+
+		Ces données sont lues par IniData.class.php et transformées en caches systèmes dans vapdata
+ 
+*/
+
+

@@ -1,0 +1,543 @@
+/* Propriétés générales */
+body,html,form,ul { margin: 0; }
+body {
+   /*background:url('../photos/fond2.gif') repeat ;*/
+  background-color: #f8f4ef; /*fdfaf4; f3ede5;fbf1e5; fbe8d1; ececea;*/
+  color:#137f59;/*#49665b; /*#008254; /*0c8455; #313813;*/ 
+  margin:0.88em;
+  font-family: "Trebuchet MS", Verdana, Geneva, Arial, sans-serif;
+  font-size: small;
+}
+/*
+p, h1, h3 , ul{
+  color : #93d232; b5d232; a1bc35;88a31f; #99bc0f;
+}
+*/
+#alertIE {
+  width: 560px;
+  margin: 0 auto;
+  text-align:center;
+  font-size: 2em;
+}
+p.retourbad {	color:red; }
+legend { color:#000066;  font-size:1.19em; }
+input, select, textarea, input[type="radio"], input[type="checkbox"] { 
+  color:#000066;
+  background-color:#d0d7d5;
+}
+input[type="submit"], input[type="button"] {  background-color: #BFD3CB; }
+option {color:#3a3a64;}
+a { 
+  color:#000099; 
+  text-decoration:none;
+}
+a:visited { color:#000066;}
+a:hover { color:#f08a0c;} /*f0990c;*/
+a img { border:none; }
+br.nettoyeur, hr.nettoyeur {
+  clear:both;
+  visibility:hidden;
+}
+form, fieldset {
+	max-width:800px;
+	margin:0 auto;
+}
+fieldset { background-color: #BFD3CB;}
+#promoVap {
+  max-width : 90%;
+  margin-left:0;
+  padding-left:0;
+}
+
+/*Entete et pied */
+#entete, #pied {
+  position:relative;
+  display:table;
+  max-width:85%;
+  min-width:45%;
+  margin:0 auto;
+  border-collapse: separate;
+  border-spacing:1.12em; 
+}
+#entete h1 { 
+  display:table-cell;
+  vertical-align:middle;
+  min-width:12em;
+	text-align:center;
+  border-bottom:2px solid #0c8455;
+  padding: 0.66em;
+}
+#entete .connect {
+  display:table-cell;
+  vertical-align:middle;
+  color: #000099; 
+  list-style-type:none;
+  padding:0;
+}
+.connect li {padding-left:5px;}
+#entete img.imgleft, #pied img.imgleft{ 
+  display:table-cell;
+  width:120px;
+}
+p.newsleft { float:left; }
+p.right {
+  float:right;
+	clear:both;	
+}
+p.right a , p.piedleft a {
+	text-decoration:none;
+	font-size:1.2em;
+	color:#0c8455;  
+}
+p.right a:hover,p.piedleft a:hover {
+	text-decoration:none;
+	font-weight:bold;
+	color:#f0990c;
+}
+/*#pied { padding-top:1.4em; } */
+#pied .menuPied {
+  display:table-cell;
+  vertical-align:top;
+  min-width:18em;  
+  border-top:2px solid #0c8455;
+}
+#pied .piedleft { 
+  display:table-cell;
+  vertical-align:top;
+  min-width:6em;
+  text-align:center;
+}
+#pied .imgright {
+  display:table-cell;
+  max-width:120px;
+}
+/* Contenu principal */
+#contenutpl {
+  position:relative;
+  max-width:98%;
+  padding-top: 7px;
+  margin:0 auto;
+}
+#contenutpl .identifier {
+  max-width:560px;
+  margin:1.4em auto 1.4em auto;
+  line-height: 1.5em;
+  font-size:1.06em;
+}
+#contenutpl .retour {
+  width:40%;
+  text-align:center;
+  margin: 7px auto 7px auto;
+}
+#contenutpl #menuLang {
+  max-width:640px;
+  /*height:24px;*/
+  margin: 0 auto; 
+  padding:0px;
+  border: 1px solid #0c8455;
+  background-color: #BFD3CB;
+}
+#menuLang a {
+  display:inline-block;  
+  color: #f8f4ef; /*#008254;*/
+  width:35px;
+  font-size: large;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height:135%;
+  text-align:center;
+  font-weight:bold;
+  background-image:url(../photos/lang_s.png);
+}
+#menuLang a:hover { 
+  color: #008254;
+}
+/* les blocs de la page gestion */
+#contenutpl #inscrire, #contenutpl #gerer, #contenutpl #tele {
+  width:31%;
+  text-align:center; 
+  float:left;
+  line-height:1.4em;
+  padding:0.45em;
+}
+#inscrire ul, #gerer ul { list-style-type:none; }
+#contenutpl .secondPlan {
+  max-width:31%;
+  text-align:center;
+  float:left;
+  margin:0 auto;
+  clear:both;
+}
+#contenutpl h3 {
+  max-width:65%;
+  margin: 0 auto;
+  color:#49665b;/*#ececea;*/
+  background-color: #9bbeb0; /*#2f765b; */
+  text-align:center;
+}
+#contenutpl .pagi {
+  min-width: 5px;
+  margin:0 auto;
+  text-align:center;
+  padding: 4px;
+}
+#contenutpl .stdt_connect {
+  max-width: 560px;
+  padding:0;
+  margin: 0 auto;
+}
+#vapspace h3.space { 
+  max-width:96%; 
+  margin-bottom:0.44em;
+  margin-top:0.44em;
+} 
+/* les blocs du vap-space */
+#vapspace {
+  display: table;
+  border-collapse: separate;
+  border-spacing:4px;
+  max-width:96%;
+  margin: 0 auto;
+}
+#vapspace ul {
+  color: #0c8455;
+  list-style-type:none;
+  border-left:1px inset #2f765b;
+  margin:0;
+  max-width:100%;
+}
+#nav li {
+    margin-left: -24px;
+    max-width: 100%;
+    padding: 0;
+}
+#nav, #bibIter, #dataPerso {
+  display:table-cell; 
+  border:1px solid #0c8455;
+  padding: 1em;
+}
+#dataPerso, #nav { max-width: 180px; }
+#charge { visibility:hidden; }
+#bibIter { max-width: 800px; }
+
+#menuMembre,#menuChat {
+ margin-bottom: 5px;
+  max-width:100%;
+} 
+#menuChat .liChat {
+  border-left: 1px inset #2f765b;
+  padding :0 0 5px 5px;
+}
+#bibIter p { text-align:center; }
+#dataPerso p { 
+  margin:0px 0px 5px 24px;
+  padding:0; 
+}
+#promoVap p {
+  width: 100%;
+  margin:0 auto;
+}
+#bibIter .vapilote { 
+  margin-top: 0.88em;
+  margin-bottom: 0.88em;
+}
+/* utilsé pour la carte Vap en flash dans vueCarte.php */
+#corpsPictos {
+  position:relative;
+  width:640px;
+  padding-top: 7px;
+  margin: 0 auto;
+  /*background-color:#d9b8d0;*/
+}
+#corpsPictos h3 {
+  width:25em;
+  color:#ececea;
+  background-color: #2f765b;
+  margin: 0 auto;   
+}
+#corpsPictos p {
+  width:510px;
+  margin: 0 auto;
+  text-align: center;
+}
+#flashContent, #heb_bds_no_xml {
+  width: 510px;
+  margin: 0 auto;
+  display:block;
+}
+#corpsPictos .signature {  
+  text-align:right;
+} 
+/* Formulaire d'inscription */ 
+p.perso label
+{
+	display:block;		 
+  margin:0;
+  padding:0;
+}
+p.poste label { margin-right:50px;}
+p.uno {width:150px;}
+p.duo {margin-left:150px;margin-top:-35px;} 
+p.perso input, p.perso select, #periode {
+	display:block;
+	margin-left:150px;
+	margin-top:-15px;
+	padding-top:0;
+}
+p.poste input { display:inline; }
+.vaposte input {
+  margin-left:0;
+  margin-right:10px.
+}
+p.vaposte label.vapostespace { margin-right:25px; }
+/*INFLUENCE TOUS LES TABLEAUX!!!*/
+th, tr.mobi, p.mobi {	font-size:0.85em; }
+table.vapilote
+{ 
+  max-width:97%;
+  min-width:200px;
+}
+.vapilote caption {padding-bottom: 0.34em; }
+table.vapilotant
+{  width: 40%;}
+table.vapilotant, table.vapilote {
+  margin-right:auto;
+  margin-left:auto;
+  border:3px ridge black;
+  margin-bottom:0.45em;
+}
+.vapilote th, .vapilotant th {
+  border-bottom:1px solid black;
+  background-color: #BFD3CB; 
+}
+.vapilote tr, .vapilotant tr {
+  border:1px solid black;
+  text-align:center;
+}
+.vapilote tr.A1, .vapilotant tr.A1 {
+  background-color:#d3d7d5;
+}
+div.menunews {
+	border:2px solid black;
+	margin: 10px;
+	padding:10px;
+	background-color:#0ab271;
+	float:left; 
+}
+div.contenu {
+	border: 2px solid black;
+	margin: 10px;
+	padding:10px;
+	float:left;
+	width: 60%;
+}
+/***************************
+/* La partie du chat-vap */
+/*************************/
+p.lienMois { text-align:center; }
+p.formubouton {
+  max-width: 60%;
+  min-width: 35%;
+  margin:0 auto;
+}
+.cadreforum
+{
+	clear:both;	
+  max-width: 640px;
+	/*width: 540px;*/
+	list-style-type:none;
+	border-bottom:2px solid #458f72;
+	margin-bottom:5px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.forumtete
+{	
+  background:url(../photos/degrade.jpg) repeat;
+	height:30px;	
+	font-style:italic;
+	margin-bottom:5px;
+	border-bottom:1px solid #458f72;
+}
+.forumtete span { color: #243d33; }
+
+.forumtete,.forumqueue,.sujetforum,.forum,#formu,.formubouton
+{	font-family:"Trebuchet MS", times, verdana,sans-serif;} 
+.sujetforum,.forum,.forumqueue
+{
+	clear:both;
+	margin-left: 12px;
+	margin-top:0;
+	padding-top:0;
+	margin-bottom:0;
+	padding-bottom:0;
+} 
+ .forumqueue
+{	 
+	margin-top:10px;
+	margin-bottom:10px;	
+} 
+.sujetforum span, .forum span, p.formuchatintro 
+{
+	font-style:italic;
+	font-weight:bold;
+}
+ p.formuchatintro
+ {
+ 	font-weight:normal;
+ }
+.sujetforum, .forum
+{	font-size:1.07em;}
+.forumqueue a
+{
+	text-decoration:none;
+	font-style:italic;
+	font-weight:bold;
+	color:#a9cf13;			/*#b5d334;*/
+}
+.forumqueue a:hover
+{
+	color:#f88c09;
+}
+.forumqueue a.queueright
+{	text-align:right;} 
+ 
+#new
+{	font-family:"Trebuchet MS", times, verdana,sans-serif;
+	/*color: #458f72 ;*/
+	clear:both;
+	width:55%;                         /* 550px;*/
+	height:32px;
+	font-style:italic;
+	font-weight:bold;
+	background-color:#2f765b; /*c0d3cc;*/		
+	/*background:url(../lib/Photos/degrade2.jpg) repeat;*/
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;	
+	margin-top:10px;
+	padding-top:10px;
+	padding-bottom:10px;
+	border:2px outset  #458f72 ;	
+}
+#formu 
+{ 
+	border:2px solid #458f72 ;
+	width:83%;
+	margin-right:auto;
+	margin-left:auto;
+}
+#formu form
+{
+	width:90%; 	
+	margin-left:auto;	
+	margin-right:auto;
+	padding:0;
+}
+#formu .formusujet input, #formu .formumess textarea, #formu .formusujet label, #formu .formumess label 
+{
+	display:block;
+	width:83%;
+	margin-left:auto;
+	margin-right:auto;
+}
+p.formuchatintro
+{
+	width:75%;
+	margin-left:auto;	
+	margin-right:auto;
+}
+.formuchatintro span  
+{	
+	font-weight: bold;
+	color:#458f72 ;
+}
+#formu .formusujet input, #formu .formumess textarea
+{	border:2px solid #458f72 ;}
+ 
+p.formubouton input
+{	font-style:italic;
+	font-size:1.12em;
+	background-color:#c0d3cc;				/*c9d49d;*/
+	margin-left:8%;
+	color:#458f72 ;
+}
+
+/*Tableau de test */
+table.test
+{
+   margin: auto; /* Centre le tableau */
+   border: 4px inset #33423d; /* Bordure du tableau avec effet 3D (outset) */
+   border-collapse: collapse; /* Colle les bordures entre elles */
+   
+}
+table.test caption 
+{
+   margin: auto; /* Centre le titre du tableau */
+   font-family: Arial, Times, "Times New Roman", serif;
+   font-weight: bold;
+   font-size: 1.2em;
+   margin-top:30px;
+   margin-bottom: 20px; /* Pour éviter que le titre ne soit trop collé au tableau en-dessous */
+}
+table.test th.header
+{
+   background-color: #2f765b;
+   font-size: 1.1em;
+   color: #313813;
+   font-family: Arial, "Arial Black", Times, "Times New Roman", serif;
+}
+table.test tr.even
+{
+  background-color:#d3d7d5;
+}
+table.test td
+{
+   border: 1px solid #33423d;
+   font-family: "Comic Sans MS", "Trebuchet MS", Times, "Times New Roman", serif;
+   text-align: center; /* Tous les textes des cellules seront centrés*/
+   padding: 5px; /* Petite marge intérieure aux cellules pour éviter que le texte touche les bordures */
+}
+table.test a img
+{
+  border:none;
+}
+/* Travail sur la methode MembreCtrl::Stats */
+.chartlist li {
+  position: relative;
+  display: block;
+}
+
+.chartlist .count {
+  display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0 0.3em;
+      text-align: right;
+      color: navy; /*#999;*/
+      font-weight: bold;
+      font-size: 0.875em;
+      z-index: 4;
+}
+
+.chartlist li a {
+      display: block;
+      padding: 0.4em 4.5em 0.4em 0.5em;
+      margin-left:-5%;
+      position: relative;
+      z-index: 2;
+}
+
+.chartlist .pcent {
+      display: block;
+      max-width:83%;      
+      margin-left: 15%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      z-index:4;
+      background: #c4b7a7; /*B8E4F5*/;
+      /*text-indent: -9999px;*/
+      /*overflow: hidden;*/
+    }

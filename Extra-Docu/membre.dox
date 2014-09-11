@@ -1,0 +1,113 @@
+/**
+\page membre.dox
+
+Le fichier Membre.ini dans vapdata/contextes
+==============================================
+
+donnees generales: nom du contexte, action (semble obsolete)
+
+		[general]
+		nom=Membre 
+		mail=info@vap-vap.be 
+		horsAntenne=19 
+		horsRegion=5 
+
+dynamique: 
+---------
+les tables 'dynamiques' sont celles qui stocquent les champs oblig et facul ci-dessous \n
+tables[0] doit contenir la PK qui est la Principal Primary Key du contexte \n
+PK la Primary Key, PK[0] doit etre la PK de tables[0] et est la PPK du  contexte. Elle  sera retournée en valeur finale \n
+FK la cle auxiliaire de tables[1], doit pointer(Foreign Key Pointe) sur PK[0] 
+
+    [dynamique] 
+    tables=spip_vap_humains,spip_vap_core 
+    PK=idhum,idvap 
+		FK=lienperso 
+		FKP=idhum 
+
+cles extra : 
+-----------
+si la-les table(s) dynamiques possède(nt) une ou des Foreign Keys \n
+[extra] explicite la relation entre \n
+FK: nom d'une cle FK dans [dynamique] \n
+FKP: le nom de la PK vers laquelle pointe FK \n
+tables: la table de reference pour FKP \n
+si plusieurs, l'odre horizontal doit etre respecté table[0], FK[0], FKP[0] etc \n
+permet de détecter toutes les FK d'une table dynamique 
+
+    [extra] 
+    tables=spip_vap_antenne,spip_vap_regions 
+    FK=lienant,lienreg 
+    FKP=idant,idreg 
+
+statique: 
+--------
+Si relation sql: multi2multi : l'autre table source de  donnees necessaires au contexte.
+
+tables, nom de la table statique \n
+PK : clé primaire de la table statique\n
+champs : nom de colonne contenant la valeur statique\n
+valeurs : les valeurs exclusives provenant du formulaire html et attachées à [statique][champs] \n 
+La valeur (choix exclusif) issue de ce formulaire sera codée dans une des colonnes sql indiquée dans [liaison][champs]
+ 
+
+		[statique]
+		tables=spip_vap_transpu
+		PK=idtrans
+		champs=societes
+		valeurs=oui,ouiavec
+
+liaison: 
+-------
+Si relation sql multi2multi, [liaison] explicite la liaison entre la table dynamique principale et la table statique.
+
+table : le nom de la table de liaison  \n
+PK: sa Primary Key \n
+FK : les clés Foreign pointant vers les tables (dynamique et statique), le respect de l'ordre vertical est important: FK[0]==FKP[0], etc \n 
+champs : colonnes spécifique à la table de liaison. Le choix d'une colonne est exclusif. \n
+valeurs: selon le choix de [statique][valeurs], indique la valeur positive à placer dans [liaison][champs]
+
+		[liaison]
+		table=spip_vap_mobiles
+		PK=idmob
+		FK=lienhum,lientrans
+		FKP=idhum,idtrans
+		champs=utilisation,abonne
+		valeurs=oui
+
+passive : 
+-------
+Si relation multi2one: les valeurs [passive][champs] sont selectionnees depuis [passive][tables] via [passive][PK] et fournies en supplement au contexte \n
+permet la creation d'un cache de donnee 'passives' à servir à chaque fois dans ce contexte \n
+pas de FK ici \n
+pour une meme table, je ne gère que un fichier passif... \n
+du à un cache simpliste, le système ne sait gérer qu'un seul et unique ajout 'passif' pour tous les contextes
+
+		[passive]
+		tables=spip_vap_antenne
+		PK=idant	
+		champs=idant,nomantenne,lienreg
+
+formulaires obligatoires et facultatifs et ceux à mettre en Vue par statut 
+--------------------------------------------------
+ 
+		
+		[anonym]
+		oblig=mail,genre,nom,prenom,adresse,code,ville,inscrit,passe,lienant,lienreg,spam,securite
+		facul=pays,tel,naissance,news,fiche,connu,statut,plaque,lang
+		[membre]
+		oblig=mail,genre,nom,prenom,adresse,code,ville,inscrit,passe,lienant,lienreg,securite
+		facul=pays,tel,naissance,news,fiche,connu,statut,plaque,lang
+		vue=nom,prenom,membre,inscrit
+		[responsable]
+		oblig=mail,genre,nom,prenom,adresse,code,ville,inscrit,passe,lienant,lienreg,securite,membre
+		facul=pays,tel,naissance,news,fiche,cachet,connu,statut,plaque,lang
+		vue=numbr,mail,nom,prenom,membre,inscrit,code,adresse,ville,tel,cachet
+		[admin]
+		oblig=mail,genre,nom,prenom,adresse,code,ville,inscrit,passe,lienant,lienreg,securite,membre
+		facul=pays,tel,naissance,news,fiche,connu,cachet,reserve,statut,plaque,lang
+		vue=numbr,mail,nom,prenom,membre,lienant,adresse,code,ville,cachet,inscrit,connu
+
+*/
+
+ 
