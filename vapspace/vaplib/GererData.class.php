@@ -2,9 +2,10 @@
  
 /**
 @class GererData :  
-@brief traiter les actions entre les données clientes et la database.
+@brief   traitement en database des actions sql (insertion, mise à jour, suppression, sélection) des données en database
 
 [basé sur la notion de contexte traité par sa classe parente IniData] (@ref IniData)
+[classe appellée par le controleur principal] [@ref Controleur]
 
 @author marcvancraesbeck@scarlet.be
 @copyright [GNU Public License](@ref licence.dox)
@@ -116,14 +117,14 @@ class GererData extends IniData
     return $passive;
   }
   /** Appel du nom de la table de liaison selon contexte et statut en cours
-  * @return string $this->liaisonTable 
+  @return string $this->liaisonTable 
   */
   public function getLiaisonTable()
   {
     return $this->liaisonTable;
   }
    /** Appel des noms des tables extra du contexte et statut en cours. 
-  * @return array avec le nom des tables extra
+   @return array avec le nom des tables extra
   */
   public function getExtraTable()
   {
@@ -138,14 +139,14 @@ class GererData extends IniData
      return $this->PPK;
   }
   /** Appel du tableau des clés FK classées [extra] dans le contexte.ini
-  * @return array un tableau des FK classées dans [extra] uniquement 
+  @return array un tableau des FK classées dans [extra] uniquement 
   */
   public function getExtraFK()
   {
     return $this->extraFK;
   }
   /** Une instance de l'objet de connexion à la Base de Donnée (BD)
-  * @return l'objet de la connexion en bd
+  @return l'objet de la connexion en bd
   */
   public function getCnx()   
   {
@@ -191,14 +192,14 @@ class GererData extends IniData
     return $this->statiqueValeurs;
   }
   /** La tableau calculé par parent::chargerContexte() sur base de contexte.ini[statique]
-  * @return array $this->schemaDataStatique
+  @return array $this->schemaDataStatique
   */
   public function getSchemaDataStatique()
   {
     return $this->schemaDataStatique;
   }
   /** La tableau calculé par parent::chargerContexte() sur base de contexte.ini[passive] 
-  * @return array $this->schemaDataPassive,  
+  @return array $this->schemaDataPassive,  
   */
   public function getSchemaDataPassive()
   {
@@ -221,9 +222,9 @@ class GererData extends IniData
     return $newTab;
   }
   /** Charger le schéma d'une table
-  * @param	$table string le nom d'une table sql
-  * @param	$flag, bool
-  * @return array
+  @param	$table string le nom d'une table sql
+  @param	$flag bool
+  @return array
   */
   public function getDataTable($table,$flag=NULL)
   {
