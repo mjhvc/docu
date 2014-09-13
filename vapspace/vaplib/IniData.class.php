@@ -290,9 +290,9 @@ class IniData extends UniConnect
 	}
 	
 /** Creation du fichier ini pour les 'champs passifs' selon un nom de table et un nom de fichier.
-  * @param $table: string, nom d'une table 'passive'
-  * @param $fichier: string, nom complet du fichier ini 
-  * @return array() le fichier ini crée et parsé en memoire
+  @param $table string, nom d'une table 'passive'
+  @param $fichier string nom complet du fichier ini 
+  @return array() le fichier ini crée et parsé en memoire
 */
   private function calculDataPassive($table,$fichier)    //($table,$tableau,$fichier)
   {  
@@ -334,9 +334,9 @@ class IniData extends UniConnect
   }   
  
    /** Concentre les opérations d'ecritures dans $fichier
-  * @param $fichier: string; le nom absolu d'un fichier ini
-  * @param $tableau: array(), le tableau des lignes à ecrires dans $fichier
-  * @return array() rempli par parse_ini_file("$fichier",true)
+  @param $fichier string le nom absolu d'un fichier ini
+  @param $tableau array() le tableau des lignes à ecrires dans $fichier
+  @return array() rempli par parse_ini_file("$fichier",true)
   */ 
   private function ecriture($fichier,$tableau)
   {
@@ -362,10 +362,10 @@ class IniData extends UniConnect
 
   
   /** Chargement du fichier $this->fileContexte, crée un fichier .ini pour tout le contexte (multi table).
-  *  @param $contexte string, nom du contexte, ici obligatoire
-  *  @param $statut string, nom du statut, ici obligatoire
-  * 
-  * La constante DIRCONTEXTE est le path du repertoire des fichiers de  contexte
+  @param $contexte string, nom du contexte, ici obligatoire
+  @param $statut string, nom du statut, ici obligatoire
+  
+  La constante DIRCONTEXTE est le path du repertoire des fichiers de  contexte
   */
   protected function chargerContexte($contexte,$statut)
   {
@@ -443,8 +443,8 @@ class IniData extends UniConnect
     // initialisation des valeurs de tables et colonnes 'statiques'
     // table dynamique et table statique sont reliées par une table de liaison 
     // relation sql : multi(dynamique) to multi(statique) via table 'liaison' 
-    // caculer le schema sql basique: par appel à schemaTable($this->statInTable)  
-    // calculer les specificités relationnelles statiques  : appel à calculDataStatique($this->statiqueTable,$this->schemaStatique,$this->fileStatiqueData)
+    // caculer le schema sql basique: par appel de schemaTable($this->statInTable)  
+    // calculer les specificités relationnelles statiques  : appel de calculDataStatique($this->statiqueTable,$this->schemaStatique,$this->fileStatiqueData)
       
     if (!empty($tabContexte["statique"])){
       $this->statiqueTable = $tabContexte["statique"]["tables"];
@@ -626,9 +626,9 @@ class IniData extends UniConnect
     $this->dataContexte['general']['horsRegion'] = $this->haReg;
     return $this->dataContexte;
   }
-  /**
-  * Comment recharger un contexte?
-  * On efface les données produites par chargerContexte() et on rappelle chargerContexte()
+  /**Comment recharger un contexte?
+  
+  On efface les données produites par chargerContexte() et on rappelle  cette méthode.
   */ 
   protected function rechargerContexte($contexte,$statut)
   {
@@ -650,9 +650,9 @@ class IniData extends UniConnect
     return $this->dataContexte;
   }  
   /** Execute la méthode privee showColumns ou lit le fichier .ini
-  *  @param  $nom_table string le nom de la table a charger
-  *  la constante DIRTABLE doit exister et indiquer le path des fichiers $nom_table.ini
-  *  @return array un tableau des metaData de : $this->table
+  @param  $nom_table string le nom de la table a charger
+  la constante DIRTABLE doit exister et indiquer le path des fichiers $nom_table.ini
+  @return array un tableau des metaData de : $this->table
   */
   protected function schemaTable($nom_table)
   {      
@@ -669,11 +669,12 @@ class IniData extends UniConnect
   } 
    
   /** Traitement des échappement automatiques
-	*
-  * Cette fonction supprime tout echappement automatique des donnees http
-  * dans un tableau de dimmension quelconque. Agit ou fait un appel récursif.
-  * Sources: http://www.lamsade.dauphine.fr/rigaux/mysqlphp/?page=code
-	* @param $tableau array le tableau à traiter
+	
+  Cette fonction supprime tout echappement automatique des donnees http
+  dans un tableau de dimmension quelconque. Agit ou fait un appel récursif.
+  Sources: http://www.lamsade.dauphine.fr/rigaux/mysqlphp/?page=code
+  @author Philippe Rigaux
+	@param $tableau array le tableau à traiter
   */
   protected function magicNormHTTP($tableau)
   {
@@ -687,9 +688,9 @@ class IniData extends UniConnect
     return $tableau;
   }
 	/** Les donnees oblig pour une table orientation formulaire client.
-	*
-	* @param $nom_table string nom de la table sql
-	* @return array $dataTableOblig
+	
+	 @param $nom_table string nom de la table sql
+	 @return array $dataTableOblig
 	*/
   public function attributsOblig($nom_table)
   {
@@ -703,10 +704,10 @@ class IniData extends UniConnect
   }
   
   /** Les donnes facultatives pour une table selon contexte dynamique, orientation formulaire (client).
-  * Si il s'agit d'une table de liaison, mettre les clés du tableau du schema  statique   
-	*
-	* @param $nom_table string nom de la table sql
-	* @return array $dataTableFacul  
+   
+  Si il s'agit d'une table de liaison, mettre les clés du tableau du schema  statique  
+	@param $nom_table string nom de la table sql
+	@return array $dataTableFacul  
 	*/
    public function attributsFacul($nom_table)
    {
@@ -723,11 +724,9 @@ class IniData extends UniConnect
     }    
     return $dataTableFacul;
   }
-  /**l'ensemble des donnees requises et facul pour une table.
-	*
-  *  orientation database, les attributs viennent tous de la base  
-	*	 @param $nom_table string nom de la table sql  
-	*  @return array $dataTableContexte
+  /**l'ensemble des donnees requises et facul pour une table orientation database, les attributs viennent tous de la base  
+	@param $nom_table string nom de la table sql  
+	@return array $dataTableContexte
 	*/
   public function attributsTable($nom_table)
   {  
@@ -747,12 +746,11 @@ class IniData extends UniConnect
     $dataTableContexte = array_merge($attrTableO,$attrTableF);
     return $dataTableContexte;
   } 
-  /**
-  * charge  les données facultatives et obligatoires avec leurs proprietes completes pour une table d'un contexte
-  * pour les données 'statiques', charge le schema des données statiques
-  * @param $nom_table string la table a charger
-  * @param $pk  bool indique si la cle primaire doit etre rajoutee ou pas
-  * retourne un tableau
+  /** charge  les données facultatives et obligatoires avec leurs proprietes completes pour une table d'un contexte pour les données 'statiques', charge le schema des données statiques
+
+   @param $nom_table string la table a charger
+   @param $pk  bool indique si la cle primaire doit etre rajoutee ou pas
+   retourne un tableau
   */
   public function chargerTable($nom_table,$pk = NULL)
   {
@@ -798,24 +796,21 @@ class IniData extends UniConnect
     return $pass; 
   }
   /**
-  * @return array() avec le nom des tables extra
+  @return array() avec le nom des tables extra
   */
   public function getExtraTable()
   {
     return $this->extraTable();    
   }
-  /*
-  * retourne le nom de l'attribut PPK (Principal Primary Key) du contexte
-  * utilisé par classe filtreData
+  /** retourne le nom de l'attribut PPK (Principal Primary Key) du contexte utilisé par classe filtreData
   */
   public function getPPK()
   {
     return $this->PPK;
   }
-/**
-* Retourne un array() de tous les attributs attendus d'un contexte:dynamiques et statiques
-* Fait la meme chose que attributsTable() mais pour tout un contexte
-*/
+  /** Fait la meme chose que attributsTable() mais pour tout un contexte
+  @return array() de tous les attributs attendus d'un contexte:dynamiques et statiques
+  */
   public function getListeAttr()
   {
     $liste = array();   
@@ -828,8 +823,7 @@ class IniData extends UniConnect
     }
     return $liste;
   }
-  /**
-  * Tous les attributs facultatifs du contexte
+  /**Tous les attributs facultatifs du contexte
   */
   public function getFaculFull()
   {
@@ -842,8 +836,7 @@ class IniData extends UniConnect
     }
     return $liste;
   }
-  /**
-  * Tous les champs obligatoires du contexte
+  /** Tous les champs obligatoires du contexte
   */
   public function getOblig()
   {
