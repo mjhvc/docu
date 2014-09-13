@@ -80,8 +80,8 @@ class IniData extends UniConnect
   
 	  $this->arrayStatuts <- les 4 statuts du système  
 		$this->arrayContextes <- le nom de tous les contextes 
-	  Si dsn.php alors $this->bd <- connexion à DB par appel de Uniconnect::getInstance()
-	  Si ($contexte et $statut) alors $this->dataContexte <- $this->chargerContexte($contexte,$statut) 
+	  Si dsn.php alors $this->bd  initie une connexion PDO via (@ref getInstance())
+	  Si ($contexte et $statut) alors chargement de $this->dataContexte (@ref chargerContexte($contexte,$statut)) 
 	
  	  @param $contexte  string, le nom du contexte
 	  @param $statut  string, le nom du statut
@@ -93,7 +93,7 @@ class IniData extends UniConnect
     $this->arrayStatuts = array('anonym','membre','responsable','admin');
     $this->arrayContextes = array('Membre','Antenne','Region','Chat','Sponsor','News','File','Auth','Index','Help','Test','Passage','Trajet','Install'); 
     
-		// C'est l'installateur qui initie le fichier dsn.php
+		// C'est l'installateur TODOREF qui initie le fichier dsn.php
 		if (!file_exists(DIRLIB.'dsn.php')) { 
 			$this->bd = NULL; 
 		}
