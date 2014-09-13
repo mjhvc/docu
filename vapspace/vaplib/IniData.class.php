@@ -78,8 +78,8 @@ class IniData extends UniConnect
    
 /** Constructeur : initialise le nom du statut (facultatif), le nom du contexte(facultatif) et une instance PDO.
   
-	  $this->arrayStatuts <- les 4 statuts du système  
-		$this->arrayContextes <- le nom de tous les contextes 
+	  $this->arrayStatuts initie les 4 statuts du système \n
+		$this->arrayContextes initie le nom de tous les contextes <br/>
 	  Si dsn.php alors $this->bd  initie une connexion PDO via (@ref getInstance())
 	  Si ($contexte et $statut) alors chargement de $this->dataContexte (@ref chargerContexte($contexte,$statut)) 
 	
