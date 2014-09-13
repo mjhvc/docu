@@ -1,4 +1,0 @@
-<map id="IniData" name="IniData">
-<area shape="rect" id="node3" href="$d1/d5e/class_gerer_data.html" title="traitement en database des actions sql (insertion, mise Ã  jour, suppression, sÃ©lection) des donnÃ©e..." alt="" coords="9,155,91,181"/>
-<area shape="rect" id="node2" href="$df/d0a/class_uni_connect.html" title="un singleton pour gérer une unique connexion sql par appel. " alt="" coords="5,5,96,32"/>
-</map>
