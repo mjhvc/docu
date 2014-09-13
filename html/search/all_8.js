@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['librgx_2ephp',['libRgx.php',['../d2/d16/lib_rgx_8php.html',1,'']]],
-  ['licence_2edox',['licence.dox',['../d0/d1a/licence_8dox.html',1,'']]]
+  ['index_2ephp',['index.php',['../d5/d26/js_2index_8php.html',1,'']]]
 ];

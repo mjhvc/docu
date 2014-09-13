@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['uniconnect',['UniConnect',['../df/d0a/class_uni_connect.html',1,'']]],
-  ['uniconnect_2eclass_2ephp',['UniConnect.class.php',['../d6/dec/_uni_connect_8class_8php.html',1,'']]]
+  ['try',['try',['../de/d20/index_8php.html#abe4cc9788f52e49485473dc699537388',1,'index.php']]]
 ];
