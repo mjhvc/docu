@@ -480,4 +480,85 @@ class GererData extends IniData
     }
     return $tableaustat;
   }
+  /**
+  Injecter: Possibilité d'injecter ici plusieurs données non classée(ni oblig ni facul) 
+  @param $dataIn les donneeés à injecter et leur table d'injection formatées comme suit: array($table,array($nomChamp),array($valChamp))
+  @param $trier, type array: le tableau de valeurs initiales.
+  */    
+  protected function Injecter($trier,$dataIn)
+  {
+    $injTable = $dataIn[0];
+    $injChamp = $dataIn[1];
+    $injVal = $dataIn[2];
+    if (! is_array($injChamp)){ $alertInj = 1;}      
+    elseif (! is_array($injVal)){ $alertInj = 1;}
+    if (!empty($alertInj)) { throw new MyPhpException('inscrire: array injection invalide'); } 
+    $cptChamp = count($injChamp);      
+    $cptVal = count($injVal); 
+    if ($cptChamp != $cptVal) { throw new MyPhpException(' inscrire: array injection: les sous-tableaux[1] et [2] sont inegaux '); }    
+    foreach ($injChamp as $cle=>$val) {
+      $valAccroc = $injVal[$cle];
+      $cleanValAccroc = $this->dataEntity($valAccroc);
+      $trier[$injTable][$val] = $cleanValAccroc;
+    }
+    return $trier ;
+  }
+  /** insertion sql d'une ligne dans une table sql (selon contexte)
+  retourne $this->lastId valeur de la PK de la ligne inseree.
+  @param $nomTable string nom de la table sql
+  @param $train array le tableau ("nomValeur"=>"valValeur")
+  @param $lastPK integer valeur de  $this->PPK a attribuer à une clé Secondaire propre à cette ligne.
+  @return integer une fois l'insertion accomplie, retourne la valeur de la clé PK de cette ligne.
+  */
+  protected function insertion($nomTable,$train=array(),$lastPK=NULL)
+  { 
+    $tablesOrig = array_keys($this->classement);
+    if (! in_array($nomTable,$tablesOrig)){ 
+      $error = $nomTable.' inconnue dans ce contexte';      
+      throw new MyPhpException($error);
+    }
+    $this->schema = $this->schemaTable($nomTable);
+    $nbr = count($train);     
+    $idx = 0; $marqueur = ''; $listeNomAttrib = ''; $listeMarqueurs = ''; 
+    //Attribution de la valeur reelle ($lastPK) aux cles secondaires qui avaient une valeur symbolique et pointent sur $this->PPK 
+    //La 'premiere' table du contexte (celle de la premiere insertion) ne doit pas avoir de FK qui point vers PPK   
+    foreach ($this->schema as $champ=>$opt){
+      if (($opt['cleSecondaire'])&& ($opt["cleSecondaireRelie"] == $this->PPK)){
+        if (is_null($lastPK)){ 
+          $msg = $champ.' : pas de valeur pour cette cle en insertion ??';          
+          throw new MyPhpException($msg);
+        }
+        else { $train[$champ] = $lastPK; }
+      }
+    }
+    //creation des chaines $listeNomAttr et $listeValAttrib avec le $sep(arateur)     
+    foreach ($train as $cle=>$val){
+      ($idx < ($nbr-1))?  $Sep = ", ": $Sep = NULL; 
+      $listeNomAttrib .= $cle.$Sep;
+      $listeMarqueurs .= ' :'.$cle.$Sep; //et pas $listeNomAttrib !!
+      $idx++;
+    }
+    //finalisation des listes d'attributs, de marqueurs et creation de la requete sql
+    $listeNomAttrib = ' ('.$listeNomAttrib.') ';
+    $listeMarqueurs = ' ('.$listeMarqueurs.') ';
+    $tableChamps = $nomTable.$listeNomAttrib;
+    $sql = strval("INSERT INTO $tableChamps VALUES $listeMarqueurs ");   
+    $stmt = $this->bd->prepare($sql); 
+    //liaison marqueurs-valeurs   
+    foreach ($train as $cle=>$val){
+      switch ($this->schema[$cle]["type"]){
+        case ('char'):case('varchar'): case('date'):case('text'): $data_type = PDO::PARAM_STR ; break;
+        case('bigint'):case ('int'):case('tinyint'):case('timestamp'): $data_type = PDO::PARAM_INT ; break;
+      }                  
+      $marqueur = ":".$cle;         
+      $stmt->bindValue($marqueur,$val,$data_type);  
+    } 
+    //Exécution de la requete preparée.    
+    if ($ok = $stmt->execute()) { 
+      $lastId = intval($this->bd->lastInsertId());
+      $stmt = NULL;
+      return $lastId;
+    }
+    else { throw new MyPhpException('Impossible d\'inserer la donnee');}
+  }
 }
