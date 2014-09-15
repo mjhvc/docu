@@ -27,6 +27,8 @@ var class_gerer_data =
     [ "getStatiqueValeurs", "d1/d5e/class_gerer_data.html#a161d9e09131c8cb737c6f08263dcbe22", null ],
     [ "getTables", "d1/d5e/class_gerer_data.html#a3607d383f86fd49c96df8bd7c15bc9de", null ],
     [ "getVue", "d1/d5e/class_gerer_data.html#a2b9868af7c052e261c94cb94df1bfcbe", null ],
+    [ "Injecter", "d1/d5e/class_gerer_data.html#ad8fb468f19e5d2a1c15acc5f8af8c883", null ],
+    [ "insertion", "d1/d5e/class_gerer_data.html#a0ba8cdf038f60732ae5c38c8f3f139dd", null ],
     [ "preparation", "d1/d5e/class_gerer_data.html#acce63ef42e8d8352a5df19f2f72add0f", null ],
     [ "resetContexte", "d1/d5e/class_gerer_data.html#a489d9a68560c78c6cd4018d81f1b3f4b", null ],
     [ "$attributsAttendus", "d1/d5e/class_gerer_data.html#ae0738908b8baec44815b18f10dbe73c3", null ],

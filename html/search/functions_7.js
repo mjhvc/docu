@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['preparation',['preparation',['../d1/d5e/class_gerer_data.html#acce63ef42e8d8352a5df19f2f72add0f',1,'GererData']]]
+  ['magicnormhttp',['magicNormHTTP',['../d9/d12/class_ini_data.html#aa208b5e1dcec332b38c53e8f0c350811',1,'IniData']]]
 ];

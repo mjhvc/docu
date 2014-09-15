@@ -11,7 +11,7 @@ var indexSectionsWithContent =
   1: "giu",
   2: "c",
   3: "cdgijlmpsu",
-  4: "_acdegmprs",
+  4: "_acdegimprs",
   5: "$eit"
 };
 
