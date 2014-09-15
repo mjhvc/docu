@@ -507,7 +507,7 @@ class GererData extends IniData
   retourne $this->lastId valeur de la PK de la ligne inseree.
   @param $nomTable string nom de la table sql
   @param $train array le tableau ("nomValeur"=>"valValeur")
-  @param $lastPK integer valeur de  $this->PPK a attribuer à une clé Secondaire propre à cette ligne.
+  @param $lastPK integer valeur de  iniData->PPK a attribuer à une clé Secondaire propre à cette ligne.
   @return integer une fois l'insertion accomplie, retourne la valeur de la clé PK de cette ligne.
   */
   protected function insertion($nomTable,$train=array(),$lastPK=NULL)
