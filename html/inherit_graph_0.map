@@ -1,5 +1,0 @@
-<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$df/d0a/class_uni_connect.html" title="un singleton pour gérer une unique connexion sql par appel. " alt="" coords="5,5,96,32"/>
-<area shape="rect" id="node2" href="$d9/d12/class_ini_data.html" title="initier la connexion à DB et charger le bon contexte. " alt="" coords="144,5,208,32"/>
-<area shape="rect" id="node3" href="$d1/d5e/class_gerer_data.html" title="traitement en database des actions sql (insertion, mise à jour, suppression, sélection) des données e..." alt="" coords="256,5,339,32"/>
-</map>
