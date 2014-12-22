@@ -1,5 +1,0 @@
-<map id="IniData" name="IniData">
-<area shape="rect" id="node3" href="$d3/dd3/class_filtres_data.html" title="la classe des filtres à appeler dans le cadre d&#39;un contexte précis. " alt="" coords="5,155,91,181"/>
-<area shape="rect" id="node4" href="$d1/d5e/class_gerer_data.html" title="traitement en database des actions sql (insertion, mise à jour, suppression, sélection) des données e..." alt="" coords="116,155,197,181"/>
-<area shape="rect" id="node2" href="$df/d0a/class_uni_connect.html" title="un singleton pour gérer une unique connexion sql par appel. " alt="" coords="57,5,148,32"/>
-</map>

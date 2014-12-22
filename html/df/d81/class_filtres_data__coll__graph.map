@@ -1,4 +1,0 @@
-<map id="FiltresData" name="FiltresData">
-<area shape="rect" id="node2" href="$d9/d12/class_ini_data.html" title="initier la connexion à DB et charger le bon contexte. " alt="" coords="19,80,83,107"/>
-<area shape="rect" id="node3" href="$df/d0a/class_uni_connect.html" title="un singleton pour gérer une unique connexion sql par appel. " alt="" coords="5,5,96,32"/>
-</map>
