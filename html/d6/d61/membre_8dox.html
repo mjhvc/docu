@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Vapspace: $title</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Vapspace
+   </div>
+   <div id="projectbrief">Système d&#39;échanges pour organiser un autostop.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="../../pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="../../annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li><a href="../../files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d6/d61/membre_8dox.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="contents">
+<div class="textblock"><h1>Le fichier Membre.ini dans vapdata/contextes </h1>
+<p>donnees generales: nom du contexte, action (semble obsolete) </p>
+<pre class="fragment">[general]
+nom=Membre 
+mail=info@vap-vap.be 
+horsAntenne=19 
+horsRegion=5 
+</pre><h2>dynamique: </h2>
+<p>les tables 'dynamiques' sont celles qui stocquent les champs oblig et facul ci-dessous <br/>
+tables[0] doit contenir la PK qui est la Principal Primary Key du contexte <br/>
+PK la Primary Key, PK[0] doit etre la PK de tables[0] et est la PPK du contexte. Elle sera retournée en valeur finale <br/>
+FK la cle auxiliaire de tables[1], doit pointer(Foreign Key Pointe) sur PK[0] </p>
+<pre class="fragment">[dynamique] 
+tables=spip_vap_humains,spip_vap_core 
+PK=idhum,idvap 
+FK=lienperso 
+FKP=idhum 
+</pre><h2>cles extra : </h2>
+<p>si la-les table(s) dynamiques possède(nt) une ou des Foreign Keys <br/>
+[extra] explicite la relation entre <br/>
+FK: nom d'une cle FK dans [dynamique] <br/>
+FKP: le nom de la PK vers laquelle pointe FK <br/>
+tables: la table de reference pour FKP <br/>
+si plusieurs, l'odre horizontal doit etre respecté table[0], FK[0], FKP[0] etc <br/>
+permet de détecter toutes les FK d'une table dynamique </p>
+<pre class="fragment">[extra] 
+tables=spip_vap_antenne,spip_vap_regions 
+FK=lienant,lienreg 
+FKP=idant,idreg 
+</pre><h2>statique: </h2>
+<p>Si relation sql: multi2multi : l'autre table source de donnees necessaires au contexte.</p>
+<p>tables, nom de la table statique <br/>
+PK : clé primaire de la table statique<br/>
+champs : nom de colonne contenant la valeur statique<br/>
+valeurs : les valeurs exclusives provenant du formulaire html et attachées à [statique][champs] <br/>
+ La valeur (choix exclusif) issue de ce formulaire sera codée dans une des colonnes sql indiquée dans [liaison][champs]</p>
+<pre class="fragment">[statique]
+tables=spip_vap_transpu
+PK=idtrans
+champs=societes
+valeurs=oui,ouiavec
+</pre><h2>liaison: </h2>
+<p>Si relation sql multi2multi, [liaison] explicite la liaison entre la table dynamique principale et la table statique.</p>
+<p>table : le nom de la table de liaison <br/>
+PK: sa Primary Key <br/>
+FK : les clés Foreign pointant vers les tables (dynamique et statique), le respect de l'ordre vertical est important: FK[0]==FKP[0], etc <br/>
+ champs : colonnes spécifique à la table de liaison. Le choix d'une colonne est exclusif. <br/>
+valeurs: selon le choix de [statique][valeurs], indique la valeur positive à placer dans [liaison][champs] </p>
+<pre class="fragment">[liaison]
+table=spip_vap_mobiles
+PK=idmob
+FK=lienhum,lientrans
+FKP=idhum,idtrans
+champs=utilisation,abonne
+valeurs=oui
+</pre><h2>passive : </h2>
+<p>Si relation multi2one: les valeurs [passive][champs] sont selectionnees depuis [passive][tables] via [passive][PK] et fournies en supplement au contexte <br/>
+permet la creation d'un cache de donnee 'passives' à servir à chaque fois dans ce contexte <br/>
+pas de FK ici <br/>
+pour une meme table, je ne gère que un fichier passif... <br/>
+du à un cache simpliste, le système ne sait gérer qu'un seul et unique ajout 'passif' pour tous les contextes </p>
+<pre class="fragment">[passive]
+tables=spip_vap_antenne
+PK=idant  
+champs=idant,nomantenne,lienreg
+</pre><h2>formulaires obligatoires et facultatifs et ceux à mettre en Vue par statut </h2>
+<pre class="fragment">[anonym]
+oblig=mail,genre,nom,prenom,adresse,code,ville,inscrit,passe,lienant,lienreg,spam,securite
+facul=pays,tel,naissance,news,fiche,connu,statut,plaque,lang
+[membre]
+oblig=mail,genre,nom,prenom,adresse,code,ville,inscrit,passe,lienant,lienreg,securite
+facul=pays,tel,naissance,news,fiche,connu,statut,plaque,lang
+vue=nom,prenom,membre,inscrit
+[responsable]
+oblig=mail,genre,nom,prenom,adresse,code,ville,inscrit,passe,lienant,lienreg,securite,membre
+facul=pays,tel,naissance,news,fiche,cachet,connu,statut,plaque,lang
+vue=numbr,mail,nom,prenom,membre,inscrit,code,adresse,ville,tel,cachet
+[admin]
+oblig=mail,genre,nom,prenom,adresse,code,ville,inscrit,passe,lienant,lienreg,securite,membre
+facul=pays,tel,naissance,news,fiche,connu,cachet,reserve,statut,plaque,lang
+vue=numbr,mail,nom,prenom,membre,lienant,adresse,code,ville,cachet,inscrit,connu</pre> </div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré le Lundi 2 Mars 2015 16:12:12 pour Vapspace par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>
