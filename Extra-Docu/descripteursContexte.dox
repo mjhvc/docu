@@ -25,6 +25,7 @@
  		+ [statique] : si relation sql multi2multi, une autre table source de  donnees necessaires au contexte 
  		+ [liaison] : si relation sql: multi2multi, la table de liaison entre la table 'dynamique' et la table 'statique'   
  		+ [passive] : si liaison sql multi2one, rajoute des valeurs liées à des champs sql d'une autre table 
+  - limites pour [liaison] : cette section tolère 2 clés FK seulement : 1 clé FK qui point vers la PPK et l'autre clé clé FK qui pointe vers la table statique 
 
 		Quand la section [dynamique][tables] est plurielle, il doit y avoir une correspondance horizontale entre [tables] et [PK], la première valeur de PK doit correspondre à la première valeur de [tables].
 		

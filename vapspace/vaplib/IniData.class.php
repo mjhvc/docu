@@ -78,9 +78,9 @@ class IniData extends UniConnect
    
 /** Constructeur : initialise le nom du statut (facultatif), le nom du contexte(facultatif) et une instance PDO.
   
-	  $this->arrayStatuts initie les 4 statuts du système \n
-		$this->arrayContextes initie le nom de tous les contextes \n
-	  Si dsn.php alors $this->bd  initie une connexion PDO via (@ref getInstance()) \n
+	  $this->arrayStatuts <- les 4 statuts du système  
+		$this->arrayContextes <- le nom de tous les contextes 
+	  Si dsn.php alors $this->bd  initie une connexion PDO via (@ref getInstance())
 	  Si ($contexte et $statut) alors chargement de $this->dataContexte (@ref chargerContexte($contexte,$statut)) 
 	
  	  @param $contexte  string, le nom du contexte
@@ -218,7 +218,7 @@ class IniData extends UniConnect
     return $iniSchema;
   }
 
-	/** Crée un fichier.ini par une requète sélect des valeurs des champs statiques. 
+	/** Crée un fichier.ini par une requète sql de sélection des valeurs des champs statiques. 
 
   Relie chaque ligne dans contexte:statique:valeurs, avec contexte:liaison:champs voir : [fichier de contexte Membre] (@ref  membre.dox)  
 	
@@ -249,7 +249,7 @@ class IniData extends UniConnect
       $valTitre = $rslt->$titre;      
 			$valTitre = $this->aposentite($valTitre); 
       //creation du fichierData.ini: relier les donnees de [statique][valeurs] aux valeurs de liaison  
-      //ligne 266: le chiffre magique 1 defini la cle FK qui pointe vers la PK statique 
+      //la clé [1] de $this->liaisonFK défini la cle FK qui pointe vers la PK statique 
 			//TODO remplacer ce chiffre magique par des champs FKDYN et FKSTAT
 			//Ceci serait une solution générale plus rationelle à l'astuce de correspondance horizontale ...
       $ini[$x] = "[".$valTitre."]" ; $x++;       
@@ -361,9 +361,10 @@ class IniData extends UniConnect
   } 
 
   
-  /** Chargement du fichier $this->fileContexte, crée un fichier .ini pour tout le contexte (multi table).
+  /** Chargement du fichier $this->fileContexte, crée un fichier .ini pour tout le contexte (multi table) charge en mémoire le tableau du contexte $this->dataContexte.
   @param $contexte string, nom du contexte, ici obligatoire
   @param $statut string, nom du statut, ici obligatoire
+  @return array $this->dataContexte
   
   La constante DIRCONTEXTE est le path du repertoire des fichiers de  contexte
   */
